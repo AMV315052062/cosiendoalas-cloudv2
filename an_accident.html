@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reseña: Fue solo un accidente | Botiquín Cultural | Cosiendo Alas</title>
+    <meta name="description" content="Reseña de la película Fue solo un accidente (2025) por Karen Socorro. Un dilema moral sobre la justicia, el trauma y la memoria sensorial.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        verdeEsperanza: '#42c3d9',
+                        moradoMedio: '#8e62b1',
+                        doradoSuave: '#fcc352',
+                        turquesaClaro: '#5dcad4',
+                        cyanVibrante: '#35d4da',
+                        azulCielo: '#53a0cc',
+                        lilaApagado: '#8a6eb4',
+                        azulOceano: '#653a82',
+                        lavandaSuave: '#afb0de',
+                        rosaOscuro: '#936479',
+                        grisAntracita: '#2b1045',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        seccion: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                        cita: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fondo suave y luminoso para el Botiquín Cultural */
+        .hero-review { background: linear-gradient(135deg, #f8f6fb 0%, #e0f2fe 100%); }
+        html { scroll-behavior: smooth; }
+        .nav-compact { height: 4rem !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); }
+        .logo-compact { height: 2.5rem !important; width: 2.5rem !important; }
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #53a0cc;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.2rem;
+        }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-subtitulo font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
+        <i class="fa-solid fa-person-running text-xl mr-2"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
+    </a>
+
+    <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img id="nav-logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-all duration-300" src="home.svg" alt="Logo Cosiendo Alas" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-bold text-lg sm:text-xl sm:font-extrabold text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <a href="https://wa.me/525535538561" target="_blank" class="hidden sm:flex px-5 py-2 bg-azulOceano text-white font-subtitulo font-bold rounded-full hover:bg-moradoMedio transition shadow-lg items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> <span>55 3553 8561</span>
+                    </a>
+                    <button id="menu-btn" class="text-azulOceano hover:text-verdeEsperanza focus:outline-none ml-2 p-2 active:bg-gray-100 rounded-full transition">
+                        <i class="fa-solid fa-bars text-2xl sm:text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 z-[45] hidden transition-opacity duration-300"></div>
+
+    <div id="side-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-[55] overflow-y-auto transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-subtitulo font-bold text-azulOceano text-lg">Menú</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="space-y-6 pb-20">
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Organización</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="index.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
+                        <li><a href="somos.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
+                        <li><a href="directorio.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Servicios Corporativos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="empresas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Prevención Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Asistencia y Recursos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="que_hacer.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Qué hacer tras una agresión?</a></li>
+                        <li><a href="orientacion_juridica.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Orientación y Defensa Legal</a></li>
+                        <li><a href="material_victimas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
+                        <li><a href="material_acompañantes.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad y Cultura</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="recomendaciones.html" class="block font-bold text-verdeEsperanza transition py-1"><i class="fa-solid fa-heart-circle-check mr-2"></i>Recomendaciones Culturales</a></li>
+                        <li><a href="cult_viol.html" class="block font-semibold text-rosaOscuro hover:text-red-700 transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
+                        <li><a href="tienda.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2">Tienda con Causa</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-32 pb-16 lg:pt-40 lg:pb-24 hero-review relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 lg:w-96 lg:h-96 bg-white opacity-60 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 lg:w-96 lg:h-96 bg-azulCielo opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in">
+            
+            <nav class="mb-8 text-sm font-subtitulo text-gray-500 flex items-center gap-2">
+                <a href="recomendaciones.html" class="hover:text-azulOceano transition"><i class="fa-solid fa-arrow-left mr-1"></i> Botiquín Cultural</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-azulCielo font-bold">Cine</span>
+            </nav>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <div class="lg:w-1/3 bg-gray-50 p-8 flex flex-col items-center justify-start border-r border-gray-100 relative">
+                        <div class="absolute top-6 left-6 flex gap-2">
+                            <span class="bg-azulCielo text-white text-xs font-subtitulo font-bold px-3 py-1 rounded-full shadow-sm">Película</span>
+                        </div>
+                        
+                        <img src="https://mx.web.img3.acsta.net/img/cc/99/cc995b687397fe6bf5600f4c08c34fa5.png" alt="Póster Fue solo un accidente" class="w-48 sm:w-64 rounded-xl shadow-lg mb-8 mt-8 border border-gray-200">
+                        
+                        <div class="w-full space-y-4 font-texto text-sm text-gray-700 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h3 class="font-seccion font-bold text-azulOceano text-base border-b border-gray-100 pb-2 mb-3">Ficha Técnica</h3>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Director:</span> <span class="text-right">Jafar Panahi</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Guion:</span> <span class="text-right">J. Panahi, M. Mahmoudian</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Año:</span> <span>2025</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Galardón:</span> <span class="text-right">Palma de Oro (Cannes)</span>
+                            </p>
+                        </div>
+
+                        <div class="w-full mt-6 flex flex-wrap gap-2 justify-center">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-brain mr-1"></i> TEPT</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-scale-unbalanced mr-1"></i> Dilema Moral</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-hand-fist mr-1"></i> Resistencia</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 flex flex-col">
+                        
+                        <div class="mb-10 border-b border-gray-200 pb-8">
+                            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-azulCielo mb-4 leading-tight">Fue solo un accidente (2025)</h1>
+                            <p class="text-xl text-gray-500 font-cita italic">El dilema desgarrador entre la justicia, la rabia y la misericordia.</p>
+                            
+                            <div class="flex items-center gap-3 mt-6">
+                                <div class="w-10 h-10 rounded-full bg-verdeEsperanza text-white flex items-center justify-center font-bold text-sm">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div>
+                                    <p class="font-subtitulo font-bold text-grisAntracita text-sm">Por Karen Socorro</p>
+                                    <p class="font-texto text-gray-500 text-xs">Curaduría · Botiquín Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="space-y-6 flex-grow font-texto text-gray-800 text-lg leading-relaxed text-justify">
+                            
+                            <p class="drop-cap">
+                                <em>Fue solo un accidente</em> (<em>Yek tasādof-e sāde</em>, 2025), escrita y dirigida por Jafar Panahi, ganadora de la Palma de Oro en Cannes y primera película iraní nominada a Mejor Película Dramática, Mejor Director y Mejor Guion en los Golden Globes. Si bien la película no tiene como tema principal la violencia sexual, la aborda como parte del conflicto. La historia se centra en un grupo de personas que estuvieron en la cárcel y fueron torturadas por el gobierno de Irán debido a su disidencia política.
+                            </p>
+
+                            <p>
+                                Uno de ellos encuentra a un hombre que cree reconocer como su torturador y lo secuestra. De ahí, se generan una serie de situaciones, entre cómicas y trágicas, que se resumen en el dilema moral de cada integrante sobre qué hacer con él. La película no moraliza sobre una vía "correcta", sino que pone sentimientos muy humanos a flor de piel: el dolor, la rabia, la impotencia, la culpa.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La memoria sensorial y el trauma</h3>
+                            
+                            <p>
+                                Lo que hace que el dilema sea tan desgarrador es un detalle que Panahi construye desde el inicio: <strong>ninguno de los sobrevivientes vio jamás la cara de su torturador</strong> porque permanecieron con los ojos vendados durante todo su cautiverio. Solo pueden reconocerlo a través de los sentidos — el sonido, el olor, el tacto.
+                            </p>
+
+                            <p>
+                                Cada uno trae un método distinto de identificación sensorial, lo que significa que sus juicios están profundamente influenciados por el instinto y la emoción más que por la lógica. ¿Es realmente él? ¿Basta con lo que el cuerpo recuerda? La película instala esa duda y no la suelta nunca.
+                            </p>
+
+                            <p>
+                                Me parece relevante debido a que está basada en las vivencias propias del director, por lo que el tratamiento del TEPT es orgánico y real. Panahi ha contado que durante sus interrogatorios siempre llevaba una venda en los ojos y estaba de cara a la pared con un papel en la mano, respondiendo preguntas que alguien hacía detrás de él:
+                            </p>
+
+                            <blockquote class="font-cita italic text-xl text-azulOceano border-l-4 border-azulCielo pl-6 my-6 leading-snug">
+                                "No sabía quién era. Solo escuchaba su voz o sus movimientos al caminar. Y siempre quise saber quién era, saber cómo se veía. Y si lo viera fuera de ahí, ¿lo reconocería o no?"
+                            </blockquote>
+
+                            <p>
+                                Esa pregunta personal — <em>¿reconocería a mi torturador si lo encontrara en la calle?</em> — es el motor de toda la película.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">Cine como resistencia viva</h3>
+
+                            <p>
+                                Panahi fue arrestado en 2022 tras una sentencia de 2010 que incluía seis años de prisión y una prohibición de veinte años para hacer cine. Fue liberado tras casi siete meses y una huelga de hambre. Pero no salió solo: compartió celda con otros presos que no habían visto el mundo exterior en cinco o seis años, que le contaron su dolor y su sufrimiento, que comieron con él y caminaron en el patio con él. Y cuando salió, sintió que cargaba un peso sobre los hombros. La película es ese peso hecho ficción. Los distintos personajes y personalidades en pantalla parecen reflejar fragmentos de los propios pensamientos y emociones conflictivos de Panahi.
+                            </p>
+
+                            <p>
+                                El coguionista, Mehdi Mahmoudian, es un periodista y activista de derechos humanos que ha pasado una década entrando y saliendo de la cárcel. Panahi le pidió que viniera al set porque conoce íntimamente cómo actúan los interrogadores: cuándo tienen risa histérica, cuándo se calman, cuándo muestran fuerza, cuándo humillan. Esa colaboración entre cineasta y sobreviviente le da a la película una textura que no se puede fabricar desde la imaginación.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La ambigüedad ética de la justicia</h3>
+
+                            <p>
+                                No es una película que te manipula para sentir dolor, sino que juega con la incomodidad para dejar una postura clara: resulta traumático, como víctima, tener que decidir qué hacer y qué es la justicia, fuera de discusiones teóricas, en una vivencia personal. Cada decisión de los personajes es un estudio en ambigüedad ética que subraya la pregunta central: <strong>¿puede la violencia alguna vez resolver verdaderamente la injusticia?</strong> Uno de los personajes, Shiva, lo condensa en una frase que funciona como brújula moral de la película:
+                            </p>
+
+                            <blockquote class="font-cita italic text-xl text-moradoMedio border-l-4 border-moradoMedio pl-6 my-8 leading-snug bg-purple-50 py-4 pr-4 rounded-r-lg">
+                                "No es porque ellos hayan recurrido a la violencia que nosotros también debamos hacerlo."
+                            </blockquote>
+
+                            <p>
+                                Pero Panahi no convierte esa frase en tesis; la pone a competir con la rabia legítima de los demás, y deja que el espectador sienta el tirón en ambas direcciones.
+                            </p>
+
+                            <p>
+                                La película resiste ofrecer respuestas fáciles, dejando al espectador confrontar la incómoda tensión entre justicia y misericordia. Al mezclar realismo emocional con humor negro, Panahi arrastra a la audiencia a un espacio moralmente incómodo donde la línea entre la rectitud y la crueldad se difumina. Lo cómico no trivializa el dolor; lo hace soportable. Las situaciones absurdas — transportar al cautivo mientras atienden eventos de la vida cotidiana, discutir a gritos dentro de una camioneta repleta de gente vestida de gala — revelan que la vida no se detiene para que la justicia se resuelva. Todo sigue. Todo coexiste. Y eso es parte de la crueldad.
+                            </p>
+
+                            <p>
+                                La película está filmada en un estilo naturalista, usando los espacios abiertos del desierto y primeros planos asfixiantes dentro de la camioneta. Esas escenas interiores se sienten como un mundo completamente distinto, quizás otra forma de prisión. Panahi filmó en secreto en Teherán y sus alrededores, a pesar de las restricciones gubernamentales. El acto mismo de hacer la película es, en sí, un acto de resistencia que espeja el dilema de sus personajes: ¿cuánto estás dispuesto a arriesgar por lo que consideras justo?
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">El sinsentido del proceso</h3>
+
+                            <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl mt-6 mb-8">
+                                <p class="font-texto text-lg text-azulOceano font-semibold italic">
+                                    Recomiendo la película sobre todo a personas que se encuentran en un proceso penal, pues plantea la pregunta "¿Para qué?". Se adentra en el sinsentido de la búsqueda de justicia como propósito ulterior y llega de manera casi agónica a la resignación de que el pasado no se puede reescribir.
+                                </p>
+                            </div>
+
+                            <p>
+                                Panahi ha dicho que, sin importar cuán enojados puedan estar sus personajes con una persona, al final del día van a elegir la no violencia sobre la violencia. Pero esa elección no trae paz. Trae otra clase de peso. El sonido escalofriante de una pierna ortopédica que rechina está condenado a perseguir a Vahid para siempre.
+                            </p>
+
+                            <p>
+                                Considero que tiene tantas interpretaciones como espectadores. En lo personal, me quedo con el amargo gusto a la respuesta. En el contexto de la continua agitación política en Irán, la película subraya el sentimiento de que no hay respuestas fáciles. Y quizás esa sea su mayor honestidad: no pretender que las hay.
+                            </p>
+
+                        </article>
+
+                        <div class="mt-12 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-azulOceano rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                    <i class="fa-solid fa-feather-pointed"></i>
+                                </div>
+                                <span class="text-sm font-subtitulo font-bold text-grisAntracita">Análisis por Karen Socorro</span>
+                            </div>
+                            <a href="recomendaciones.html" class="text-azulOceano font-subtitulo font-bold hover:text-moradoMedio transition text-sm flex items-center px-4 py-2 border border-gray-200 rounded-full hover:bg-gray-50">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Botiquín Cultural
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h2 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h2>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto Institucional</h3>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados. Textos del Botiquín Cultural bajo licencia de uso libre con atribución.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('overlay');
+        const navbar = document.getElementById('main-navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const menuLinks = document.querySelectorAll('#side-menu a');
+        
+        function toggleMenu() {
+            const isOpen = !sideMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                sideMenu.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => { overlay.classList.add('hidden'); }, 300);
+                document.body.style.overflow = '';
+            } else {
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth; 
+                overlay.classList.remove('opacity-0');
+                sideMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function harmonizeGraphics() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-compact');
+                navLogo.classList.add('logo-compact');
+            } else {
+                navbar.classList.remove('nav-compact');
+                navLogo.classList.remove('logo-compact');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => { link.addEventListener('click', toggleMenu); });
+        
+        window.addEventListener('scroll', harmonizeGraphics);
+        window.addEventListener('resize', harmonizeGraphics);
+        harmonizeGraphics();
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") { window.location.href = "https://www.google.com"; }
+        });
+    </script>
+</body>
+</html>
