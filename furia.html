@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reseña: La Furia | Botiquín Cultural | Cosiendo Alas</title>
+    <meta name="description" content="Reseña de la película La Furia (2025) por Karen Socorro. Una exploración de la rabia, la víctima imperfecta y la oscuridad del trauma.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        verdeEsperanza: '#42c3d9',
+                        moradoMedio: '#8e62b1',
+                        doradoSuave: '#fcc352',
+                        turquesaClaro: '#5dcad4',
+                        cyanVibrante: '#35d4da',
+                        azulCielo: '#53a0cc',
+                        lilaApagado: '#8a6eb4',
+                        azulOceano: '#653a82',
+                        lavandaSuave: '#afb0de',
+                        rosaOscuro: '#936479',
+                        grisAntracita: '#2b1045',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        seccion: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                        cita: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fondo suave y luminoso para el Botiquín Cultural */
+        .hero-review { background: linear-gradient(135deg, #f8f6fb 0%, #e0f2fe 100%); }
+        html { scroll-behavior: smooth; }
+        .nav-compact { height: 4rem !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); }
+        .logo-compact { height: 2.5rem !important; width: 2.5rem !important; }
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #936479; /* Rosa oscuro para conectar con la furia */
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.2rem;
+        }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-subtitulo font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
+        <i class="fa-solid fa-person-running text-xl mr-2"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
+    </a>
+
+    <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img id="nav-logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-all duration-300" src="home.svg" alt="Logo Cosiendo Alas" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-bold text-lg sm:text-xl sm:font-extrabold text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <a href="https://wa.me/525535538561" target="_blank" class="hidden sm:flex px-5 py-2 bg-azulOceano text-white font-subtitulo font-bold rounded-full hover:bg-moradoMedio transition shadow-lg items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> <span>55 3553 8561</span>
+                    </a>
+                    <button id="menu-btn" class="text-azulOceano hover:text-verdeEsperanza focus:outline-none ml-2 p-2 active:bg-gray-100 rounded-full transition">
+                        <i class="fa-solid fa-bars text-2xl sm:text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 z-[45] hidden transition-opacity duration-300"></div>
+
+    <div id="side-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-[55] overflow-y-auto transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-subtitulo font-bold text-azulOceano text-lg">Menú</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="space-y-6 pb-20">
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Organización</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="index.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
+                        <li><a href="somos.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
+                        <li><a href="directorio.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Servicios Corporativos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="empresas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Prevención Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Asistencia y Recursos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="que_hacer.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Qué hacer tras una agresión?</a></li>
+                        <li><a href="orientacion_juridica.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Orientación y Defensa Legal</a></li>
+                        <li><a href="material_victimas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
+                        <li><a href="material_acompañantes.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad y Cultura</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="recomendaciones.html" class="block font-bold text-verdeEsperanza transition py-1"><i class="fa-solid fa-heart-circle-check mr-2"></i>Recomendaciones Culturales</a></li>
+                        <li><a href="cult_viol.html" class="block font-semibold text-rosaOscuro hover:text-red-700 transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
+                        <li><a href="tienda.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2">Tienda con Causa</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-32 pb-16 lg:pt-40 lg:pb-24 hero-review relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 lg:w-96 lg:h-96 bg-white opacity-60 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 lg:w-96 lg:h-96 bg-rosaOscuro opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in">
+            
+            <nav class="mb-8 text-sm font-subtitulo text-gray-500 flex items-center gap-2">
+                <a href="recomendaciones.html" class="hover:text-azulOceano transition"><i class="fa-solid fa-arrow-left mr-1"></i> Botiquín Cultural</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-azulCielo font-bold">Cine</span>
+            </nav>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <div class="lg:w-1/3 bg-gray-50 p-8 flex flex-col items-center justify-start border-r border-gray-100 relative">
+                        <div class="absolute top-6 left-6 flex gap-2">
+                            <span class="bg-azulCielo text-white text-xs font-subtitulo font-bold px-3 py-1 rounded-full shadow-sm">Película</span>
+                        </div>
+                        
+                        <img src="data:image/jpeg;base64,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 " alt="Póster La Furia" class="w-48 sm:w-64 rounded-xl shadow-lg mb-8 mt-8 border border-gray-200">
+                        
+                        <div class="w-full space-y-4 font-texto text-sm text-gray-700 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h3 class="font-seccion font-bold text-azulOceano text-base border-b border-gray-100 pb-2 mb-3">Ficha Técnica</h3>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Directora:</span> <span class="text-right">Gemma Blasco</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Año:</span> <span>2025</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Protagonista:</span> <span class="text-right">Ángela Cervantes</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Galardón:</span> <span class="text-right">Biznaga de Plata (Málaga)</span>
+                            </p>
+                        </div>
+
+                        <div class="w-full mt-6 flex flex-wrap gap-2 justify-center">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-fire mr-1"></i> Rabia</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-masks-theater mr-1"></i> Teatro / Medea</span>
+                            <span class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-skull mr-1"></i> Trauma</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 flex flex-col">
+                        
+                        <div class="mb-10 border-b border-gray-200 pb-8">
+                            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-rosaOscuro mb-4 leading-tight">La Furia (2025)</h1>
+                            <p class="text-xl text-gray-500 font-cita italic">La oscuridad del trauma y el derecho innegable a transitar la rabia.</p>
+                            
+                            <div class="flex items-center gap-3 mt-6">
+                                <div class="w-10 h-10 rounded-full bg-verdeEsperanza text-white flex items-center justify-center font-bold text-sm">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div>
+                                    <p class="font-subtitulo font-bold text-grisAntracita text-sm">Por Karen Socorro</p>
+                                    <p class="font-texto text-gray-500 text-xs">Curaduría · Botiquín Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="space-y-6 flex-grow font-texto text-gray-800 text-lg leading-relaxed text-justify">
+                            
+                            <p class="drop-cap">
+                                <em>La Furia</em> (2025), segundo largometraje de la directora barcelonesa Gemma Blasco, es una película visceral que surgió del enojo de la directora al no encontrar representaciones culturales acordes a su propio sentir con su experiencia de la rabia.
+                            </p>
+
+                            <p>
+                                La película no es autobiográfica, pero sí parte de algo que Blasco vivió: fue agredida sexualmente a los 18 años. Blasco ha declarado que <em>"esta no es una película sobre la superación de un trauma, sino sobre la oscuridad que este genera. No está contada desde la delicadeza ni la fragilidad. Ni mucho menos desde lo panfletario".</em>
+                            </p>
+
+                            <blockquote class="font-cita italic text-xl text-rosaOscuro border-l-4 border-rosaOscuro pl-6 my-6 leading-snug bg-red-50 py-4 pr-4 rounded-r-lg">
+                                "Se acerca a una furia que nosotras, las mujeres, también llevamos por dentro y tenemos derecho a transitar. Esta película es mi venganza creativa y me moría de ganas de contarla gritando, rugiendo, desde la garra."
+                            </blockquote>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La víctima imperfecta y la búsqueda de poder</h3>
+                            
+                            <p>
+                                A manera reactiva, muestra la agresión y explosividad a través de imágenes. Considero que las imágenes estuvieron bien logradas en cuanto a que se muestra sin vergüenza su actuar errático, la remoción con el enojo como impulso, que desestigmatiza a la mujer que siente rabia. Sin duda, se supera a la víctima indefensa y se presenta en pantalla a una mujer que, lejos de paralizarse, actúa con el motor de la furia. 
+                            </p>
+
+                            <p>
+                                Blasco ha explicado que Medea le interesa precisamente porque es "la víctima imperfecta": le han causado mucho dolor, pero ella también ejerce muchísima violencia. Lo que hace es apropiarse de su dolor y decir <em>"este dolor es mío"</em>. Eso, que es indefendible en la vida real, resulta fascinante como representación de una mujer que busca su posición de poder dentro del sufrimiento. Y eso es exactamente lo que la película hace con Álex: no la convierte en heroína ni en mártir, sino en una mujer furiosa que no pide permiso para estarlo.
+                            </p>
+
+                            <p>
+                                Para Blasco, la furia es una emoción que las mujeres tienen derecho a transitar, a sentir. <em>"Esto no significa que haya que ejercer la violencia, pero es una emoción que está ahí y que tenemos derecho a transitar"</em>. El título mismo tiene una doble carga: por un lado, la emoción; por otro, las Furias son la personificación de la venganza en los mitos, lo cual conecta íntimamente con la parte teatral de la película.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La metáfora de la caza y la degradación</h3>
+
+                            <p>
+                                La metáfora más potente es la del jabalí que su familia cazó y cómo ella forma parte de ese ritual de despellejamiento y cocción. Paralelo a la percepción del propio cuerpo, muestra sin tapujos el desagrado que se siente ante el cuerpo después de verlo degradado e indefenso ante la impotencia en contra de la violencia ejercida. 
+                            </p>
+
+                            <p>
+                                Blasco ha contado que la caza aparece en la película porque la ha vivido en su pueblo desde pequeña. La escena del destripe del jabalí conecta con lo que está viviendo Álex, y funciona para comprender a su personaje. Además, la caza funciona a través de los roles: en una batida está el que manda, el que enseña, el aprendiz, el que es cazado y quien caza. Esa estructura de poder — quién tiene el cuchillo, quién está sobre la mesa — es la misma que la película explora entre los personajes. La búsqueda de agencia y reapropiación mediante el enojo son imágenes potentes que casi no se muestran en pantalla.
+                            </p>
+
+                            <p>
+                                La sangre, los animales sacrificados, la puesta en escena de Medea no funcionan como elementos decorativos sino como detonantes dramáticos que activan la furia contenida de una víctima obligada a explicar su sufrimiento. La película también toca algo que pocas abordan con esta franqueza: cómo la red de apoyo puede fallar. Los cuestionamientos de Adrián no son solo desafortunados: son estructurales. Revelan cómo incluso los lazos más íntimos reproducen la lógica del descrédito. El hermano, consumido por la culpa de no haberla protegido, reacciona con la rabia que él cree legítima pero que termina alejándolo de lo que Álex necesita. El dolor no solo afecta a la víctima, sino que se propaga a su entorno y transforma las relaciones interpersonales.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">El sonido del trauma y las preguntas sin respuesta</h3>
+
+                            <p>
+                                Hay una decisión formal que merece señalarse: la escena de la agresión sexual tiene lugar completamente a oscuras, dejando que sea el sonido el que construya la imagen. Esto provoca que el espectador imagine lo que está ocurriendo, algo que resulta más efectivo y terrorífico que mostrarlo. Blasco ha sido clara sobre esto: <strong class="text-azulOceano">"No hay que generar más imágenes sobre violencia sexual hacia las mujeres"</strong>. La película elige otra ruta: mostrar la rabia, no la violación.
+                            </p>
+
+                            <p>
+                                Hay una pregunta que la película deja abierta al espectador: "¿Por qué seguimos haciendo las mismas tragedias una y otra vez?" Blasco ha dicho que es una pregunta sin respuesta, que lleva a un callejón sin salida. Esa honestidad — plantar la pregunta y no pretender resolverla — es parte de lo que hace a <em>La Furia</em> una película incómoda por las razones correctas.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La honestidad del rechazo personal</h3>
+
+                            <div class="bg-gray-50 border border-gray-200 p-6 rounded-2xl my-6">
+                                <p class="font-texto text-gray-700 italic">
+                                    En lo personal, me pareció lenta (pese a que esa era la intención) y pretenciosa. La protagonista es una actriz de teatro que canaliza su dolor a través de la tragedia <em>Medea</em>. Al no conocer la historia a fondo, me costó conectar ambas historias. Y si bien se explica el paralelismo, no terminé de entender su metáfora ni conectar con la protagonista.
+                                </p>
+                            </div>
+
+                            <p>
+                                Para quien quiera acercarse a <em>La Furia</em> con más contexto: Medea es una mujer de la mitología griega a quien Jasón — su esposo, a quien ella sacrificó todo por ayudar — abandona por otra mujer. En respuesta, Medea comete un acto de venganza extrema e indefendible que le devuelve el poder sobre su propia historia. Lo que Blasco hace con esa referencia es mostrar a Álex flirteando con la idea de venganza — no con el hecho, sino con el concepto, desde la ficción. A su vez, hay una especie de paso de relevo entre generaciones cuando Ana Torrent, la directora de la obra en la ficción, conecta con Álex: las tragedias que seguimos repitiendo las reescribimos y adaptamos al momento social que estamos viviendo.
+                            </p>
+
+                            <p>
+                                Asimismo, considero que termina siendo un <em>rape revenge</em> deslactosado y no me gusta el género. Mi calificación se ve ampliamente influenciada por mi proceso personal, donde el enojo y la venganza no me han ayudado. Esa honestidad de la reseñista es, en sí misma, valiosa: no todas las representaciones funcionan para todas las personas, y eso no invalida ni a la película ni a quien la ve.
+                            </p>
+
+                            <p>
+                                La crítica ha reconocido que la película es "tan interesante como excesiva" y que "peca de un exceso que acaba saturando", pero que si sostiene su intensidad es gracias a la entrega total de Ángela Cervantes, quien ganó la Biznaga de Plata a Mejor Actriz en el Festival de Málaga por este papel.
+                            </p>
+
+                            <p>
+                                No obstante, considero que es necesario tener diversas representaciones, pues no encasilla a las víctimas y muestra la gran variedad y complejidad de las dimensiones emocionales que habita una persona. En lo personal, no la volvería a ver. Sin embargo, considero que muchas personas pueden encontrar una representación más personal en ella, ya sea como proceso en general o como consuelo en una etapa determinada del proceso. Como escribió una crítica:
+                            </p>
+
+                            <blockquote class="font-cita italic text-xl text-moradoMedio border-l-4 border-moradoMedio pl-6 my-6 leading-snug">
+                                "La náusea y la arcada. El asco y la incomodidad. Lo repugnante y lo desagradable. El principio de La Furia es todo eso y más. Y lo es porque debe serlo. Porque, si lo que se cuenta son las consecuencias de una violación, el relato no debe ser agradable".
+                            </blockquote>
+
+                        </article>
+
+                        <div class="mt-12 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-azulOceano rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                    <i class="fa-solid fa-feather-pointed"></i>
+                                </div>
+                                <span class="text-sm font-subtitulo font-bold text-grisAntracita">Análisis por Karen Socorro</span>
+                            </div>
+                            <a href="recomendaciones.html" class="text-azulOceano font-subtitulo font-bold hover:text-moradoMedio transition text-sm flex items-center px-4 py-2 border border-gray-200 rounded-full hover:bg-gray-50">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Botiquín Cultural
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h2 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h2>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto Institucional</h3>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados. Textos del Botiquín Cultural bajo licencia de uso libre con atribución.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('overlay');
+        const navbar = document.getElementById('main-navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const menuLinks = document.querySelectorAll('#side-menu a');
+        
+        function toggleMenu() {
+            const isOpen = !sideMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                sideMenu.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => { overlay.classList.add('hidden'); }, 300);
+                document.body.style.overflow = '';
+            } else {
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth; 
+                overlay.classList.remove('opacity-0');
+                sideMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function harmonizeGraphics() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-compact');
+                navLogo.classList.add('logo-compact');
+            } else {
+                navbar.classList.remove('nav-compact');
+                navLogo.classList.remove('logo-compact');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => { link.addEventListener('click', toggleMenu); });
+        
+        window.addEventListener('scroll', harmonizeGraphics);
+        window.addEventListener('resize', harmonizeGraphics);
+        harmonizeGraphics();
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") { window.location.href = "https://www.google.com"; }
+        });
+    </script>
+</body>
+</html>
