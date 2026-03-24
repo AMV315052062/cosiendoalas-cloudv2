@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Análisis: How to Have Sex | Representaciones culturales | Cosiendo Alas</title>
+    <meta name="description" content="Análisis de la película How to Have Sex (2023). Una exploración matizada del consentimiento, la presión social, la amistad femenina y la representación de la víctima.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Paleta estricta de identidad gráfica
+                        verdeEsperanza: '#42c3d9',
+                        moradoMedio: '#8e62b1',
+                        doradoSuave: '#fcc352',
+                        turquesaClaro: '#5dcad4',
+                        cyanVibrante: '#35d4da',
+                        azulCielo: '#53a0cc',
+                        lilaApagado: '#8a6eb4',
+                        azulOceano: '#653a82',
+                        lavandaSuave: '#afb0de',
+                        rosaOscuro: '#936479',
+                        grisAntracita: '#2b1045',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        seccion: ['Montserrat', 'sans-serif'], 
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                        cita: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-review { background: linear-gradient(135deg, #2b1045 0%, #1a0a29 100%); }
+        html { scroll-behavior: smooth; }
+        .nav-compact { height: 4rem !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); }
+        .logo-compact { height: 2.5rem !important; width: 2.5rem !important; }
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Estilo editorial para el primer párrafo */
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #8e62b1;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.2rem;
+        }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-subtitulo font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
+        <i class="fa-solid fa-person-running text-xl mr-2"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
+    </a>
+
+    <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img id="nav-logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-all duration-300" src="home.svg" alt="Logo Cosiendo Alas" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-bold text-lg sm:text-xl sm:font-extrabold text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <a href="https://wa.me/525535538561" target="_blank" class="hidden sm:flex px-5 py-2 bg-azulOceano text-white font-subtitulo font-bold rounded-full hover:bg-moradoMedio transition shadow-lg items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> <span>55 3553 8561</span>
+                    </a>
+                    <button id="menu-btn" class="text-azulOceano hover:text-verdeEsperanza focus:outline-none ml-2 p-2 active:bg-gray-100 rounded-full transition">
+                        <i class="fa-solid fa-bars text-2xl sm:text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 z-[45] hidden transition-opacity duration-300"></div>
+
+    <div id="side-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-[55] overflow-y-auto transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-subtitulo font-bold text-azulOceano text-lg">Menú</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="space-y-6 pb-20">
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Organización</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="index.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
+                        <li><a href="somos.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
+                        <li><a href="directorio.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Servicios Corporativos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="empresas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Prevención Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Asistencia y Recursos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="que_hacer.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Qué hacer tras una agresión?</a></li>
+                        <li><a href="orientacion_juridica.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Orientación y Defensa Legal</a></li>
+                        <li><a href="material_victimas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
+                        <li><a href="material_acompañantes.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad y Cultura</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="recomendaciones.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Recomendaciones Culturales</a></li>
+                        <li><a href="cult_viol.html" class="block font-bold text-rosaOscuro transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
+                        <li><a href="tienda.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2">Tienda con Causa</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-32 pb-16 lg:pt-40 lg:pb-24 hero-review relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 lg:w-96 lg:h-96 bg-moradoMedio opacity-20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 lg:w-96 lg:h-96 bg-turquesaClaro opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in">
+            
+            <nav class="mb-8 text-sm font-subtitulo text-gray-400 flex items-center gap-2">
+                <a href="cult_viol.html" class="hover:text-white transition">Observatorio Crítico</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-lavandaSuave font-bold">Análisis Cinematográfico</span>
+            </nav>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <div class="lg:w-1/3 bg-fondoPagina p-8 flex flex-col items-center justify-start border-r border-gray-200 relative">
+                        <div class="absolute top-6 left-6 flex gap-2">
+                            <span class="bg-azulOceano text-white text-xs font-subtitulo font-bold px-3 py-1 rounded-full shadow-sm">Cine</span>
+                        </div>
+                        
+                        <img src="data:image/jpeg;base64,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"" alt="Póster How to Have Sex" class="w-48 sm:w-64 rounded-xl shadow-lg mb-8 mt-8 border border-gray-200">
+                        
+                        <div class="w-full space-y-4 font-texto text-sm text-gray-700 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h3 class="font-seccion font-bold text-azulOceano text-base border-b border-gray-100 pb-2 mb-3">Ficha Técnica</h3>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Directora:</span> <span class="text-right">Molly Manning Walker</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Año:</span> <span>2023</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Género:</span> <span>Drama / Coming-of-age</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Galardón:</span> <span class="text-right">Un Certain Regard (Cannes)</span>
+                            </p>
+                        </div>
+
+                        <div class="w-full mt-6 flex flex-wrap gap-2 justify-center">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-seccion font-bold tracking-wider">Consentimiento</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-seccion font-bold tracking-wider">Presión Social</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-seccion font-bold tracking-wider">Amistad</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 flex flex-col">
+                        
+                        <div class="mb-10 border-b border-gray-200 pb-8">
+                            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-grisAntracita mb-4 leading-tight">How to Have Sex (2023) alerta de spoiler</h1>
+                            <p class="text-xl text-gray-500 font-cita italic">Rompiendo el mito del consentimiento binario y la "víctima perfecta".</p>
+                        </div>
+
+                        <article class="space-y-6 flex-grow font-texto text-gray-800 text-lg leading-relaxed text-justify">
+                            
+                            <p class="drop-cap">
+                                <em>How to Have Sex</em> (2023), ópera prima de la directora y cinefotógrafa británica Molly Manning Walker, ganadora del premio Un Certain Regard en el Festival de Cannes, logra envolverte en lo que significa ser joven y estar inmersa en la presión social y la novedad del alcohol y el sexo, pues suelen confundirse e ir de la mano.
+                            </p>
+
+                            <p>
+                                Walker construyó esta historia a partir de sus propias experiencias adolescentes —ella misma ha hablado de una agresión sexual que vivió a los 16 años— y de talleres que realizó con adolescentes sobre su comprensión del consentimiento, cuyos resultados la impactaron profundamente. El resultado es una película que no busca dar lecciones ni funcionar como un especial educativo: es una <strong>exploración matizada del consentimiento</strong> que permanece con el espectador mucho después de que los créditos terminan.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulOceano mt-10 mb-3">La presión del "currículum sexual"</h3>
+                            <p>
+                                La película muestra que, en muchas ocasiones, las razones para decir "sí" son más complejas que el simple deseo; que las mujeres estamos en una cultura que nos hipersexualiza y mide nuestro valor con base en nuestro "currículum sexual". Esto no es accidental en el guion: Walker ha explicado que el título de la película captura la idea de que "creíamos que se suponía que debíamos tener sexo de cierta manera" y que la presión viene de todos los ángulos — del sexo opuesto, del entorno, de las amistades, del alcohol.
+                            </p>
+
+                            <p>
+                                <em>How to Have Sex</em> retrata cómo la virginidad suele estar estigmatizada, lo cual es un mensaje contradictorio con respecto a aquellas representaciones sociales donde la mujer es valorada precisamente por ella. La película demuestra cómo perder la virginidad puede convertirse en una meta que se debe alcanzar sin importar el costo. Skye, la amiga más experimentada, le dice a Tara una frase que funciona como sentencia:
+                            </p>
+
+                            <blockquote class="font-cita italic text-2xl text-moradoMedio border-l-4 border-moradoMedio pl-6 my-6 leading-snug">
+                                "Si no coges en estas vacaciones, no lo harás nunca."
+                            </blockquote>
+
+                            <p>
+                                Esa línea condensa toda la presión que la película disecciona: la virginidad como defecto, como retraso, como aquello que te vuelve menos. Y sin embargo, fuera de ese microcosmos de fiesta, la cultura más amplia sigue valorando a la mujer por su "pureza". La contradicción es el punto.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulOceano mt-10 mb-3">Más allá del "sí" o el "no" verbal</h3>
+                            <p>
+                                En una entrevista para la revista <em>Caimán</em>, Manning Walker fue aún más precisa: afirmó que el concepto de consentimiento se ha vuelto demasiado binario, que todo el mundo se obsesiona con el "sí" o el "no" verbal, pero que también deberíamos prestar atención al lenguaje corporal y a cómo la otra persona se está sintiendo.
+                            </p>
+
+                            <p>
+                                No necesitas palabras para entrar a la cabeza de la protagonista: las luces, los diálogos y las situaciones te permiten habitar la curiosidad, el miedo, la presión, la confusión y la violencia. Una escena clave en un club nocturno resulta particularmente poderosa, utilizando cámara lenta y un paisaje sonoro inquietante para capturar la confusión y el miedo que Tara experimenta. 
+                            </p>
+
+                            <p>
+                                La mirada de Tara y su rostro dejan al descubierto sus pensamientos más íntimos. <strong>Mia McKenna-Bruce</strong> logra algo extraordinario con su actuación: su excelencia se demuestra precisamente en las expresiones que hace cuando se queda callada, cuando no sabe cómo reaccionar ante eventos que la harán madurar de golpe. Walker buscaba conscientemente desafiar la representación típica de la víctima en pantalla —alguien traumatizada que no puede recuperarse— y quiso que Tara fuera la más ruidosa en la habitación, capaz de hacer un chiste en el momento más inapropiado, como todas hacemos cuando intentamos salir de situaciones difíciles.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulOceano mt-10 mb-3">La dificultad de nombrar la herida</h3>
+                            <p>
+                                Hay un momento devastador en el que Tara intenta hablar con Badger sobre lo que le hizo Paddy, y lo único que logra articular es: <em>"Es un chico raro."</em> Badger descarta la conversación, excusa el comportamiento de su amigo —son amigos de toda la vida, así es él. Dentro de esta cultura donde la misoginia es ignorada e incluso fomentada, Tara encuentra imposible expresar lo que le ha sucedido. 
+                            </p>
+
+                            <p>
+                                No es sino hasta la escena del aeropuerto, al final, cuando Tara logra decirle a Em que estaba dormida cuando Paddy abusó de ella. El diálogo es desgarrador en su sencillez:
+                            </p>
+
+                            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 my-6 shadow-sm">
+                                <p class="mb-2"><strong>Tara:</strong> "Estaba... como dormida, así que..."</p>
+                                <p class="mb-2"><strong>Em:</strong> "¿Estás diciendo...? Taz, deberías haber dicho algo."</p>
+                                <p class="mb-2"><strong>Tara (llorando):</strong> "No, tienes razón. Debí haber dicho algo. Está bien."</p>
+                                <p><strong>Em:</strong> "No, no está bien."</p>
+                            </div>
+
+                            <p>
+                                Ese intercambio concentra todo lo que la película ha construido durante noventa minutos: la dificultad de nombrar, la culpa autoimpuesta, y la importancia vital de que alguien, desde el exterior, te valide y diga <em>"no, no está bien."</em>
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulOceano mt-10 mb-3">Amistad y crueldad: las dinámicas de poder</h3>
+                            <p>
+                                Asimismo, la película aborda la amistad femenina como lugar de refugio y de traición, cómo podemos ser crueles entre nosotras, y que el amor sin comprensión lastima. Walker diseñó intencionalmente la dinámica del grupo como un triángulo en el que dos de ellas siempre están más cerca, dejando invariablemente a una persona fuera.
+                            </p>
+
+                            <p>
+                                Skye, motivada por la rivalidad y su propia inseguridad, empuja a Tara hacia situaciones de riesgo disfrazándolas de "consejos de amiga". La crueldad entre amigas no nace del odio, sino de las propias heridas sin sanar.
+                            </p>
+
+                            <blockquote class="font-cita italic text-xl text-rosaOscuro border-l-4 border-rosaOscuro pl-6 my-8 leading-snug">
+                                "La mayoría de nosotras, como mujeres y niñas, hemos sido Tara; todas hemos tenido una amiga como Skye que disfraza los celos y la inseguridad con la frase 'es broma'; todas nos hemos sentido aisladas en nuestras dinámicas de amistad; todas hemos hecho algo que no queríamos hacer."<br>
+                                <span class="font-texto text-sm text-gray-500 font-normal mt-2 block">— Reseña de usuaria en Letterboxd.</span>
+                            </blockquote>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulOceano mt-10 mb-3">Conclusión: Una nota de resiliencia</h3>
+                            <p>
+                                Para los hombres, la película muestra que la reciprocidad y el entusiasmo son necesarios para una interacción sana, y que el "no" viene de muchas maneras. La directora diseñó a Badger para que los hombres se vieran reflejados en él, mientras que Paddy fue deliberadamente complejo para evidenciar que no hay villanos de cartón: <strong>hay una cultura que produce estas dinámicas.</strong>
+                            </p>
+
+                            <p>
+                                A pesar de toda la energía explosiva que transmite, se trata de una película triste. Es una historia de pérdida, pero no de la virginidad, sino de la inocencia. En lo personal, me gustó debido a que me identifiqué. Comprendo que pueda parecer lenta y que no está sucediendo nada; sin embargo, en esas sutilezas —los pequeños detalles que se trasladan a la vida real— residen las pautas para cambiar la imagen de la "víctima perfecta y congruente".
+                            </p>
+
+                            <p>
+                                La película cierra con Tara tomada de la mano de Em, corriendo por la terminal del aeropuerto hacia el avión mientras grita: <em>"¡Nos vamos a casa!"</em> Walker describe ese final como una nota de resiliencia y libertad. Tara no queda reducida a víctima. Ha sido irrevocablemente cambiada, pero corre.
+                            </p>
+
+                        </article>
+
+                        <div class="mt-12 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-azulOceano rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                    <i class="fa-solid fa-feather-pointed"></i>
+                                </div>
+                                <span class="text-sm font-subtitulo font-bold text-grisAntracita">Reseña por Karen Socorro</span>
+                            </div>
+                            <a href="recomendaciones.html" class="text-azulOceano font-subtitulo font-bold hover:text-moradoMedio transition text-sm flex items-center px-4 py-2 border border-gray-200 rounded-full hover:bg-gray-50">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Volver 
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h2 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h2>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h3>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('overlay');
+        const navbar = document.getElementById('main-navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const menuLinks = document.querySelectorAll('#side-menu a');
+        
+        function toggleMenu() {
+            const isOpen = !sideMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                sideMenu.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => { overlay.classList.add('hidden'); }, 300);
+                document.body.style.overflow = '';
+            } else {
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth; 
+                overlay.classList.remove('opacity-0');
+                sideMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function harmonizeGraphics() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-compact');
+                navLogo.classList.add('logo-compact');
+            } else {
+                navbar.classList.remove('nav-compact');
+                navLogo.classList.remove('logo-compact');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => { link.addEventListener('click', toggleMenu); });
+        
+        window.addEventListener('scroll', harmonizeGraphics);
+        window.addEventListener('resize', harmonizeGraphics);
+        harmonizeGraphics();
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") { window.location.href = "https://www.google.com"; }
+        });
+    </script>
+</body>
+</html>
