@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Reseña: Amores Materialistas | Botiquín Cultural | Cosiendo Alas</title>
+    <meta name="description" content="Reseña de la película Amores Materialistas (Materialists, 2025) por Karen Socorro. Un análisis de la comedia romántica, la frivolidad y la representación de la violencia sexual como subtrama.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        verdeEsperanza: '#42c3d9',
+                        moradoMedio: '#8e62b1',
+                        doradoSuave: '#fcc352',
+                        turquesaClaro: '#5dcad4',
+                        cyanVibrante: '#35d4da',
+                        azulCielo: '#53a0cc',
+                        lilaApagado: '#8a6eb4',
+                        azulOceano: '#653a82',
+                        lavandaSuave: '#afb0de',
+                        rosaOscuro: '#936479',
+                        grisAntracita: '#2b1045',
+                        fondoPagina: '#f8f6fb', 
+                    },
+                    fontFamily: {
+                        titulo1: ['Playfair Display', 'serif'],
+                        subtitulo: ['Montserrat', 'sans-serif'],
+                        seccion: ['Montserrat', 'sans-serif'],
+                        texto: ['Source Sans Pro', 'sans-serif'],
+                        cita: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fondo suave y luminoso para el Botiquín Cultural */
+        .hero-review { background: linear-gradient(135deg, #f8f6fb 0%, #e0f2fe 100%); }
+        html { scroll-behavior: smooth; }
+        .nav-compact { height: 4rem !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); }
+        .logo-compact { height: 2.5rem !important; width: 2.5rem !important; }
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #53a0cc;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: 0.2rem;
+        }
+    </style>
+</head>
+<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
+
+    <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-subtitulo font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
+        <i class="fa-solid fa-person-running text-xl mr-2"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
+    </a>
+
+    <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between h-full items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img id="nav-logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-all duration-300" src="home.svg" alt="Logo Cosiendo Alas" onerror="this.src='https://placehold.co/100x100?text=CA'; this.style.borderRadius='50%'">
+                    <div>
+                        <span class="block font-subtitulo font-bold text-lg sm:text-xl sm:font-extrabold text-azulOceano tracking-wide">COSIENDO ALAS</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <a href="https://wa.me/525535538561" target="_blank" class="hidden sm:flex px-5 py-2 bg-azulOceano text-white font-subtitulo font-bold rounded-full hover:bg-moradoMedio transition shadow-lg items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> <span>55 3553 8561</span>
+                    </a>
+                    <button id="menu-btn" class="text-azulOceano hover:text-verdeEsperanza focus:outline-none ml-2 p-2 active:bg-gray-100 rounded-full transition">
+                        <i class="fa-solid fa-bars text-2xl sm:text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 z-[45] hidden transition-opacity duration-300"></div>
+
+    <div id="side-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-[55] overflow-y-auto transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-subtitulo font-bold text-azulOceano text-lg">Menú</span>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            </div>
+            <nav class="space-y-6 pb-20">
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Organización</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="index.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
+                        <li><a href="somos.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
+                        <li><a href="directorio.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Servicios Corporativos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="empresas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Prevención Institucional</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Asistencia y Recursos</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="que_hacer.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Qué hacer tras una agresión?</a></li>
+                        <li><a href="orientacion_juridica.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Orientación y Defensa Legal</a></li>
+                        <li><a href="material_victimas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
+                        <li><a href="material_acompañantes.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad y Cultura</h3>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="recomendaciones.html" class="block font-bold text-verdeEsperanza transition py-1"><i class="fa-solid fa-heart-circle-check mr-2"></i>Recomendaciones Culturales</a></li>
+                        <li><a href="cult_viol.html" class="block font-semibold text-rosaOscuro hover:text-red-700 transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
+                        <li><a href="tienda.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2">Tienda con Causa</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-32 pb-16 lg:pt-40 lg:pb-24 hero-review relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 lg:w-96 lg:h-96 bg-white opacity-60 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 lg:w-96 lg:h-96 bg-azulCielo opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in">
+            
+            <nav class="mb-8 text-sm font-subtitulo text-gray-500 flex items-center gap-2">
+                <a href="recomendaciones.html" class="hover:text-azulOceano transition"><i class="fa-solid fa-arrow-left mr-1"></i> Botiquín Cultural</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-azulCielo font-bold">Cine</span>
+            </nav>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <div class="lg:w-1/3 bg-gray-50 p-8 flex flex-col items-center justify-start border-r border-gray-100 relative">
+                        <div class="absolute top-6 left-6 flex gap-2">
+                            <span class="bg-azulCielo text-white text-xs font-subtitulo font-bold px-3 py-1 rounded-full shadow-sm">Película</span>
+                        </div>
+                        
+                        <img src="data:image/jpeg;base64,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" alt="Póster Amores Materialistas" class="w-48 sm:w-64 rounded-xl shadow-lg mb-8 mt-8 border border-gray-200">
+                        
+                        <div class="w-full space-y-4 font-texto text-sm text-gray-700 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h3 class="font-seccion font-bold text-azulOceano text-base border-b border-gray-100 pb-2 mb-3">Ficha Técnica</h3>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Directora:</span> <span class="text-right">Celine Song</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Año:</span> <span>2025</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Reparto:</span> <span class="text-right">Dakota Johnson, Chris Evans, Pedro Pascal</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-bold text-grisAntracita">Género:</span> <span class="text-right">Comedia Romántica</span>
+                            </p>
+                        </div>
+
+                        <div class="w-full mt-6 flex flex-wrap gap-2 justify-center">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-face-smile-beam mr-1"></i> Comedia Romántica</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-gem mr-1"></i> Materialismo</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-seccion font-bold tracking-wider"><i class="fa-solid fa-shield-heart mr-1"></i> Responsabilidad Colectiva</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 p-8 sm:p-12 lg:p-14 flex flex-col">
+                        
+                        <div class="mb-10 border-b border-gray-200 pb-8">
+                            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-azulCielo mb-4 leading-tight">Amores Materialistas (2025)</h1>
+                            <p class="text-xl text-gray-500 font-cita italic">Una deconstrucción madura de la comedia romántica, donde el amor y la frivolidad chocan con la realidad.</p>
+                            
+                            <div class="flex items-center gap-3 mt-6">
+                                <div class="w-10 h-10 rounded-full bg-verdeEsperanza text-white flex items-center justify-center font-bold text-sm">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div>
+                                    <p class="font-subtitulo font-bold text-grisAntracita text-sm">Por Karen Socorro</p>
+                                    <p class="font-texto text-gray-500 text-xs">Curaduría · Botiquín Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="space-y-6 flex-grow font-texto text-gray-800 text-lg leading-relaxed text-justify">
+                            
+                            <p class="drop-cap">
+                                <em>Amores materialistas</em> (<em>Materialists</em>, 2025), escrita y dirigida por Celine Song — cuya ópera prima <em>Past Lives</em> fue nominada al Oscar — y protagonizada por Dakota Johnson, Chris Evans y Pedro Pascal, no es, en sí, una película sobre violencia sexual. No obstante, hay una agresión sexual como historia secundaria, lo cual es novedoso en un <em>chick flick</em> y da visibilidad a una problemática que existe y nos afecta como sociedad.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La frivolidad como escudo</h3>
+                            
+                            <p>
+                                La historia es sobre Lucy, una casamentera de profesión, superficial y cínica en cuanto al amor se trata. Busca a un hombre rico. Encuentra a un hombre rico, cuando reaparece su exnovio, ocasionando un triángulo amoroso. En sí, me parece una historia interesante sobre cómo se concibe el amor en el siglo XXI, las expectativas, la falsedad, la necesidad de no estar solo. 
+                            </p>
+
+                            <p>
+                                Song trabajó como casamentera en Nueva York cuando era una dramaturga que luchaba por salir adelante, y claramente esa experiencia fue la inspiración. La película está ambientada en una Nueva York obscenamente cara donde el dinero domina casi cada aspecto de la vida, y Lucy reduce el amor a una ecuación: salario, altura, edad, compatibilidad financiera. Las personas son tratadas como hojas de cálculo humanas.
+                            </p>
+
+                            <p>
+                                Fue polémica en cuanto al mensaje, pero considero que fue una buena exposición de la frivolidad. En lo personal, no considero que romantice la pobreza. Lucy es activamente antipática — no al estilo de una antiheroína, sino de manera autorreflexiva: le dice a otros personajes en dos ocasiones que no es una buena persona, que eso la hace sentir mal, pero que no puede evitar ser como es. Esa honestidad cruda sobre su propia superficialidad es lo que le da textura a un personaje que, en otra película, habría sido solo un estereotipo de comedia romántica.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La violencia sexual como realidad ineludible</h3>
+
+                            <p>
+                                En cuanto al tema de la agresión sexual, considero que es un buen tratamiento porque se representa con la gravedad y respeto que merece, sin ser condescendiente con la víctima. Se le da agencia, sus miedos se retratan como una reacción natural y no debilidad. 
+                            </p>
+
+                            <p>
+                                Song ha explicado que la subtrama estuvo siempre en el ADN de la película. Los nombres de los tres hombres — Harry, Mark y John — provienen de la canción "Satellite of Love" de Lou Reed, que habla de una mujer que sale con distintos hombres entre semana. Song leyó la estadística de que una de cada tres mujeres sufre agresión sexual a lo largo de su vida, y pensó que, de los tres hombres, dos serían los intereses románticos, pero Mark sería el nombre del hombre que agrede a Sophie. Song le dijo a <em>TODAY</em> que sentía que era importante incluirlo:
+                            </p>
+
+                            <blockquote class="font-cita italic text-xl text-moradoMedio border-l-4 border-moradoMedio pl-6 my-6 leading-snug bg-purple-50 py-4 pr-4 rounded-r-lg">
+                                "Tienes una historia que pretende hablar sobre amor y citas, sobre cómo se siente en 2025, y no incluir una historia donde puede haber una violación de confianza, una violación de todo, un crimen... no me habría parecido honesto."
+                            </blockquote>
+
+                            <p>
+                                Asimismo, muestra que la violencia sexual es una responsabilidad colectiva (no culpa) y no solo del agresor. Es bello ver cómo la comunidad, cuando se involucra de manera activa, ayuda a las víctimas a recordar el control de sus vidas. A la víctima se le consulta, escucha y respeta. Además, se da visibilidad al derecho de las víctimas de seguir adelante con sus vidas y ser felices. 
+                            </p>
+
+                            <p>
+                                Hay un momento donde Sophie, la clienta agredida, le grita a Lucy algo que condensa toda la película: que no es mercancía, que es una persona, y que sabe que merece amor. Zoë Winters ofrece un retrato sombrío e increíble de una mujer que simplemente busca amor.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">La crítica: ¿Recurso narrativo o provocación necesaria?</h3>
+
+                            <p>
+                                La crítica va encaminada a que se puede ver a la agresión como un instrumento y, nuevamente, un recurso narrativo, pues sirve a la trama para avanzar. La protagonista sufre una crisis de valores debido a la agresión de una tercera persona. Puede resultar insensible que solo sea uno de los muchos temas que la película quiere abordar y se diluye entre los múltiples mensajes. 
+                            </p>
+
+                            <p>
+                                Esta observación no es solo mía: <em>NPR</em> señaló que la función de la subtrama parece clara — como una forma de destruir el enfoque cínico y capitalista de Lucy hacia las citas y el amor — pero que la película la lleva más allá al permitir que Lucy encuentre redención a través del sufrimiento de Sophie. Otra crítica fue más directa: la subtrama está enmarcada como una especie de prueba moral para Lucy, pero sobre todo se siente "inoportuna y oportunista". 
+                            </p>
+
+                            <p>
+                                El debate sobre si la agresión sexual funciona como catalizador narrativo legítimo o como recurso instrumental es, en sí mismo, una conversación que vale la pena tener — y el hecho de que la película la provoque es parte de su valor, incluso cuando la ejecución es desigual.
+                            </p>
+
+                            <p>
+                                Además, las actuaciones dejan mucho que desear y resulta incómodo verlas en varias ocasiones. La falta de química entre los personajes y el poco carisma de la protagonista la pueden volver lenta. Las críticas británicas fueron especialmente negativas, pero otros críticos consideraron que Johnson da su mejor actuación cinematográfica hasta la fecha, capturando toda la inseguridad bajo la superficie de esta mujer aparentemente segura.
+                            </p>
+
+                            <h3 class="font-seccion font-bold text-2xl text-azulCielo mt-10 mb-3">El éxito comercial y el futuro del género</h3>
+
+                            <p>
+                                Sin embargo, me parece un avance que Hollywood produzca una película que augura éxito (por el <em>cast</em>, historia y distribución), donde se aborda este tema. La película recaudó 108 millones de dólares a nivel mundial con un presupuesto de 20 millones, lo que demuestra que el público sí acude a ver películas que mezclan romance comercial con realidades incómodas. 
+                            </p>
+
+                            <p>
+                                Me parece subversivo enunciar que cuando se habla de amor y sexo, también se toque la violencia, pues lamentablemente no se entienden sin su complemento en los tiempos en los que vivimos.
+                            </p>
+
+                            <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl mt-8 mb-6">
+                                <p class="font-texto text-lg text-azulOceano font-semibold italic text-center">
+                                    Yo sí la recomiendo, es palomera, se pueden extraer reflexiones interesantes sobre nuestra manera de relacionarnos con el amor y el otro, además de que abre la discusión sobre la violación. Me parece importante señalar que es una película pionera en cuanto a cine comercial y violación.
+                                </p>
+                            </div>
+
+                            <p>
+                                Tiene sus fallas, pero abre la puerta para que exista un mayor interés por parte de la industria cinematográfica a representar nuevas historias, donde el amor no es perfecto ni siempre feliz. El consenso crítico de <em>Rotten Tomatoes</em> la describe como "una deconstrucción madura de la comedia romántica convencional". Esperemos que futuras representaciones no lo traten como recurso narrativo sino con el respeto y seriedad que merece.
+                            </p>
+
+                        </article>
+
+                        <div class="mt-12 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-azulOceano rounded-full flex items-center justify-center text-white font-bold text-sm">
+                                    <i class="fa-solid fa-feather-pointed"></i>
+                                </div>
+                                <span class="text-sm font-subtitulo font-bold text-grisAntracita">Análisis por Karen Socorro</span>
+                            </div>
+                            <a href="recomendaciones.html" class="text-azulOceano font-subtitulo font-bold hover:text-moradoMedio transition text-sm flex items-center px-4 py-2 border border-gray-200 rounded-full hover:bg-gray-50">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Volver al Botiquín Cultural
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h2 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h2>
+                    </div>
+                    <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
+                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto Institucional</h3>
+                    <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
+                            <a href="https://wa.me/525535538561" target="_blank" class="hover:text-white transition">55 3553 8561</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados. Textos del Botiquín Cultural bajo licencia de uso libre con atribución.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('overlay');
+        const navbar = document.getElementById('main-navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const menuLinks = document.querySelectorAll('#side-menu a');
+        
+        function toggleMenu() {
+            const isOpen = !sideMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                sideMenu.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => { overlay.classList.add('hidden'); }, 300);
+                document.body.style.overflow = '';
+            } else {
+                overlay.classList.remove('hidden');
+                void overlay.offsetWidth; 
+                overlay.classList.remove('opacity-0');
+                sideMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function harmonizeGraphics() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-compact');
+                navLogo.classList.add('logo-compact');
+            } else {
+                navbar.classList.remove('nav-compact');
+                navLogo.classList.remove('logo-compact');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => { link.addEventListener('click', toggleMenu); });
+        
+        window.addEventListener('scroll', harmonizeGraphics);
+        window.addEventListener('resize', harmonizeGraphics);
+        harmonizeGraphics();
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") { window.location.href = "https://www.google.com"; }
+        });
+    </script>
+</body>
+</html>
