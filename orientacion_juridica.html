@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Orientación y Defensa Legal | Cosiendo Alas</title>
-    <meta name="description" content="Asesoría jurídica integral para víctimas de violencia y defensa legal especializada para imputadas con perspectiva de género en México.">
-    <meta name="keywords" content="traductor legal, ministerio público, carpeta de investigación, abogadas penalistas CDMX, defensa a imputadas, criminalización mujeres, perspectiva de género">
+    <title>Orientación Jurídica y Tus Derechos | Cosiendo Alas</title>
+    <meta name="description" content="Conoce tus derechos procesales como víctima o imputada, y las herramientas jurídicas y protocolos de la SCJN que obligan al sistema a impartir justicia sin discriminación.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,20 +18,25 @@
             theme: {
                 extend: {
                     colors: {
-                        azulOceano: '#653a82',     
-                        verdeEsperanza: '#42c3d9', 
-                        doradoSuave: '#fcc352',    
-                        grisAntracita: '#2b1045',  
+                        verdeEsperanza: '#42c3d9',
                         moradoMedio: '#8e62b1',
-                        azulCielo: '#53a0cc',
+                        doradoSuave: '#fcc352',
                         turquesaClaro: '#5dcad4',
+                        cyanVibrante: '#35d4da',
+                        azulCielo: '#53a0cc',
+                        lilaApagado: '#8a6eb4',
+                        azulOceano: '#653a82',
                         lavandaSuave: '#afb0de',
+                        rosaOscuro: '#936479',
+                        grisAntracita: '#2b1045',
                         fondoPagina: '#f8f6fb', 
                     },
                     fontFamily: {
                         titulo1: ['Playfair Display', 'serif'],
                         subtitulo: ['Montserrat', 'sans-serif'],
+                        seccion: ['Montserrat', 'sans-serif'],
                         texto: ['Source Sans Pro', 'sans-serif'],
+                        cita: ['Playfair Display', 'serif'],
                     }
                 }
             }
@@ -40,80 +44,48 @@
     </script>
 
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #2b1045 0%, #653a82 50%, #42c3d9 100%); }
+        .hero-legal { background: linear-gradient(135deg, #2b1045 0%, #653a82 100%); }
         html { scroll-behavior: smooth; }
+        body { background-color: #f8f6fb; }
+        
         .nav-compact { height: 4rem !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); }
         .logo-compact { height: 2.5rem !important; width: 2.5rem !important; }
-
-        /* Acordeón */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        /* Acordeones */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .4s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; margin-top: -10px}
+            100%  {opacity: 1; margin-top: 0px}
         }
-        .accordion-content.open {
-            max-height: 9999px;
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .accordion-icon {
-            transition: transform 0.3s ease;
-        }
-        .accordion-btn.active .accordion-icon {
-            transform: rotate(180deg);
-        }
-
-        /* Tarjetas de derechos */
-        .derecho-card {
-            border-left: 4px solid;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .derecho-card:hover {
-            transform: translateX(4px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        /* Navegación interna sticky */
-        .nav-interna {
-            position: sticky;
-            top: 4.5rem;
-            z-index: 30;
-        }
-
-        /* Alerta de urgencia */
-        .alerta-urgencia {
-            background: linear-gradient(135deg, #7f1d1d, #991b1b);
-            border-left: 6px solid #fca5a5;
-        }
-
-        /* Tag section */
-        .section-tag {
+        
+        .fundamento-tag {
             display: inline-block;
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            padding: 0.2rem 0.7rem;
-            border-radius: 999px;
+            background: #f0ecf8;
+            color: #653a82;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin: 0.2rem;
+            border: 1px solid #d5cce8;
         }
-
-        /* Glosario grid */
-        .glosario-item {
-            border-left: 3px solid #653a82;
-            padding-left: 1rem;
-            margin-bottom: 1.25rem;
-        }
-
-        /* Smooth scroll offset for fixed nav */
-        [id] { scroll-margin-top: 5rem; }
     </style>
 </head>
-<body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden">
+<body class="text-grisAntracita font-texto antialiased flex flex-col min-h-screen">
 
-    <!-- SALIDA RÁPIDA -->
-    <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
+    <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-subtitulo font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
         <i class="fa-solid fa-person-running text-xl mr-2"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
     </a>
 
-    <!-- NAVBAR -->
     <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div class="flex justify-between h-full items-center">
@@ -123,8 +95,9 @@
                         <span class="block font-subtitulo font-bold text-lg sm:text-xl sm:font-extrabold text-azulOceano tracking-wide">COSIENDO ALAS</span>
                     </div>
                 </a>
+
                 <div class="flex items-center gap-2 sm:gap-4">
-                    <a href="https://wa.me/525535538561?text=Hola,%20necesito%20orientación%20legal%20de%20Cosiendo%20Alas" target="_blank" class="hidden sm:flex px-5 py-2 bg-azulOceano text-white font-subtitulo font-bold rounded-full hover:bg-moradoMedio transition shadow-lg items-center gap-2">
+                    <a href="https://wa.me/525535538561" target="_blank" class="hidden sm:flex px-5 py-2 bg-azulOceano text-white font-subtitulo font-bold rounded-full hover:bg-moradoMedio transition shadow-lg items-center gap-2">
                         <i class="fa-brands fa-whatsapp text-xl"></i> <span>55 3553 8561</span>
                     </a>
                     <button id="menu-btn" class="text-azulOceano hover:text-verdeEsperanza focus:outline-none ml-2 p-2 active:bg-gray-100 rounded-full transition">
@@ -135,871 +108,363 @@
         </div>
     </nav>
 
-    <!-- OVERLAY MENÚ -->
     <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 z-[45] hidden transition-opacity duration-300"></div>
 
-    <!-- MENÚ LATERAL -->
     <div id="side-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-[55] overflow-y-auto transform translate-x-full transition-transform duration-300">
         <div class="p-6">
             <div class="flex justify-between items-center mb-8">
                 <span class="font-subtitulo font-bold text-azulOceano text-lg">Menú</span>
-                <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
-                </button>
+                <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2"><i class="fa-solid fa-xmark text-2xl"></i></button>
             </div>
             <nav class="space-y-6 pb-20">
                 <div>
                     <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Organización</h3>
-                    <ul class="space-y-3 pl-2 text-sm">
-                        <li><a href="index.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
-                        <li><a href="somos.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
-                        <li><a href="directorio.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="index.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
+                        <li><a href="somos.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
+                        <li><a href="directorio.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Servicios Corporativos</h3>
-                    <ul class="space-y-3 pl-2 text-sm">
-                        <li><a href="empresas.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Prevención Institucional</a></li>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="empresas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Prevención Institucional</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Asistencia y Recursos</h3>
-                    <ul class="space-y-3 pl-2 text-sm">
-                        <li><a href="que_hacer.html" class="block font-subtitulo font-bold text-red-600 hover:text-red-700 transition py-1"><i class="fa-solid fa-triangle-exclamation mr-2"></i>¿Qué hacer tras una agresión?</a></li>
-                        <li><a href="orientacion_juridica.html" class="block font-subtitulo font-bold text-verdeEsperanza transition py-1"><i class="fa-solid fa-book-open mr-2"></i>Orientación y Defensa Legal</a></li>
-                        <li><a href="material_victimas.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
-                        <li><a href="material_acompañantes.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="que_hacer.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Qué hacer tras una agresión?</a></li>
+                        <li><a href="orientacion_juridica.html" class="block font-bold text-verdeEsperanza transition py-1">Orientación y Defensa Legal</a></li>
+                        <li><a href="material_victimas.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
+                        <li><a href="material_acompañantes.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad y Cultura</h3>
-                    <ul class="space-y-3 pl-2 text-sm">
-                        <li><a href="recomendaciones.html" class="block font-subtitulo font-semibold text-verdeEsperanza hover:text-azulOceano transition py-1"><i class="fa-solid fa-heart-circle-check mr-2"></i>Recomendaciones Culturales</a></li>
-                        <li><a href="cult_viol.html" class="block font-subtitulo font-semibold text-red-500 hover:text-red-700 transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
-                        <li><a href="tienda.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2"><i class="fa-solid fa-store mr-2"></i>Tienda con Causa</a></li>
+                    <ul class="space-y-3 pl-2 text-sm font-subtitulo">
+                        <li><a href="recomendaciones.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1"><i class="fa-solid fa-heart-circle-check mr-2"></i>Recomendaciones Culturales</a></li>
+                        <li><a href="cult_viol.html" class="block font-semibold text-rosaOscuro hover:text-red-700 transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
+                        <li><a href="tienda.html" class="block font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2">Tienda con Causa</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
 
-    <!-- HERO -->
-    <header class="hero-gradient pt-32 pb-16 lg:pt-40 lg:pb-24 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <h1 class="font-titulo1 font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
-                Orientación y <span class="text-doradoSuave italic">Defensa Legal</span>
+    <header class="hero-legal pt-32 pb-16 lg:pt-40 lg:pb-24 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 lg:w-96 lg:h-96 bg-cyanVibrante opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 lg:w-96 lg:h-96 bg-moradoMedio opacity-20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 fade-in">
+            <span class="text-doradoSuave font-subtitulo font-bold tracking-widest uppercase text-sm mb-4 block">Defensa Legal Estratégica</span>
+            <h1 class="font-titulo1 font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight">
+                Las reglas del sistema <span class="text-doradoSuave italic">a tu favor</span>
             </h1>
-            <p class="font-subtitulo text-lg text-gray-100 max-w-2xl mx-auto">
-                No importa en qué lado del escritorio estés. Ofrecemos acompañamiento para víctimas y defensa especializada para imputadas. <strong class="text-white">Para mujeres, disidencias y hombres.</strong>
+            <p class="font-texto text-lg text-gray-200 max-w-3xl mx-auto mb-8">
+                El derecho no es neutral. Conoce tus derechos frente a las autoridades y descubre cómo los protocolos de la Suprema Corte nos ayudan a nivelar la balanza y obligar al sistema a impartir justicia.
             </p>
         </div>
     </header>
 
-    <!-- NAVEGACIÓN INTERNA -->
-    <div class="nav-interna bg-white border-b border-gray-200 shadow-sm overflow-x-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex gap-1 py-2 min-w-max">
-                <a href="#diccionario" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-azulOceano hover:bg-purple-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-book text-azulOceano"></i> Diccionario
-                </a>
-                <a href="#derechos-victima" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-verdeEsperanza hover:bg-teal-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-shield-halved text-verdeEsperanza"></i> Derechos Víctima
-                </a>
-                <a href="#derechos-sexuales" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-star text-doradoSuave"></i> Delitos Sexuales
-                </a>
-                <a href="#mp-falla" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-red-600 hover:bg-red-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-triangle-exclamation text-red-500"></i> Si el MP falla
-                </a>
-                <a href="#derechos-imputada" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-azulCielo hover:bg-blue-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-scale-balanced text-azulCielo"></i> Imputada
-                </a>
-                <a href="#perspectiva-genero" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-moradoMedio hover:bg-purple-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-venus-mars text-moradoMedio"></i> Perspectiva Género
-                </a>
-                <a href="#perspectiva-infancia" class="px-3 py-2 text-xs font-subtitulo font-bold text-grisAntracita hover:text-turquesaClaro hover:bg-cyan-50 rounded-lg transition whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-child text-turquesaClaro"></i> Perspectiva Infancia
-                </a>
+    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <section class="fade-in">
+            <div class="text-center mb-10">
+                <h2 class="font-titulo1 font-bold text-3xl sm:text-4xl text-grisAntracita mb-4">Tus derechos en el proceso penal</h2>
+                <p class="font-texto text-gray-600 max-w-2xl mx-auto">La información es tu primera línea de defensa. Ya sea que acudas a denunciar una agresión o que estés enfrentando una imputación, la ley establece garantías que ninguna autoridad puede negarte.</p>
             </div>
-        </div>
-    </div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 1 — DICCIONARIO JURÍDICO
-        ════════════════════════════════════════════════ -->
-        <section id="diccionario" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-purple-100 p-6 hover:shadow-md transition-all group-hover:border-azulOceano">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-book text-2xl text-azulOceano"></i>
-                        </div>
-                        <div>
-                            <span class="section-tag bg-purple-100 text-azulOceano mb-1">Herramienta base</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">Diccionario Jurídico</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">El lenguaje legal traducido. Porque entender tu proceso es parte de recuperar tu poder.</p>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-verdeEsperanza transition hover:shadow-lg">
+                    <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-verdeEsperanza mb-4 text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
                     </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-azulOceano accordion-icon ml-4 flex-shrink-0"></i>
+                    <h3 class="font-seccion font-bold text-xl text-grisAntracita mb-3">Derechos como víctima</h3>
+                    <ul class="space-y-3 font-texto text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-verdeEsperanza mt-1"></i> Tienes derecho a recibir <strong>asesoría jurídica gratuita</strong> en todo momento.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-verdeEsperanza mt-1"></i> A coadyuvar con el Ministerio Público y que se reciban todos los datos de prueba que aportes.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-verdeEsperanza mt-1"></i> A recibir trato digno, no ser revictimizada y exigir la reparación integral del daño (Art. 109 CNPP).</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-verdeEsperanza mt-1"></i> A tener acceso irrestricto a tu carpeta de investigación.</li>
+                    </ul>
                 </div>
-            </button>
 
-            <div class="accordion-content open">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-purple-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <p class="text-gray-600 mb-6 max-w-3xl italic border-l-4 border-doradoSuave pl-4">Las instituciones hablan en un idioma diseñado para excluir. Este glosario existe para que ninguna palabra desconocida te deje sin herramientas.</p>
-
-                    <!-- Cards rápidas (contenido original) -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                        <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-                            <h3 class="font-bold text-azulOceano text-base mb-1.5 flex items-center gap-2"><i class="fa-solid fa-landmark text-sm"></i> Ministerio Público (MP)</h3>
-                            <p class="text-sm text-gray-600">Es la autoridad encargada de recibir tu denuncia, investigar los hechos y protegerte. En la realidad, es la oficina donde se inicia todo el proceso legal.</p>
-                        </div>
-                        <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-                            <h3 class="font-bold text-azulOceano text-base mb-1.5 flex items-center gap-2"><i class="fa-solid fa-folder-open text-sm"></i> Carpeta de Investigación (CI)</h3>
-                            <p class="text-sm text-gray-600">Es el "expediente" donde se guarda toda la historia de tu caso: tu declaración, pruebas, entrevistas y peritajes. Tienes derecho a solicitar copias de ella siempre.</p>
-                        </div>
-                        <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-                            <h3 class="font-bold text-azulOceano text-base mb-1.5 flex items-center gap-2"><i class="fa-solid fa-microscope text-sm"></i> Dictamen Pericial</h3>
-                            <p class="text-sm text-gray-600">Es la opinión de un experto (médico, psicólogo, informático) que sirve como prueba. Por ejemplo, el documento que certifica el daño psicológico tras la agresión.</p>
-                        </div>
-                        <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
-                            <h3 class="font-bold text-azulOceano text-base mb-1.5 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-sm"></i> Medidas de Protección</h3>
-                            <p class="text-sm text-gray-600">Órdenes que da el MP para protegerte de inmediato. Pueden incluir que el agresor no se acerque a ti, a tu casa o a tu trabajo por un tiempo determinado.</p>
-                        </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-moradoMedio transition hover:shadow-lg">
+                    <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center text-moradoMedio mb-4 text-xl">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
                     </div>
-
-                    <!-- Glosario extendido -->
-                    <h3 class="font-subtitulo font-bold text-lg text-azulOceano mb-5 flex items-center gap-2">
-                        <i class="fa-solid fa-list text-sm"></i> Glosario completo
-                    </h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-1">
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Agente del Ministerio Público (MP)</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Persona encargada de recibir tu denuncia, dirigir la investigación y representar al Estado en el proceso penal. El MP representa al Estado y a la sociedad, <em>no a ti</em> de forma personal. Para tener a alguien que te represente exclusivamente a ti, necesitas una Asesora Jurídica de Víctimas.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Asesora Jurídica de Víctimas (AJV)</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Abogada o abogado cuya función es defender exclusivamente tus intereses dentro del proceso penal. Es gratuita, independiente del MP y tienes derecho a solicitarla desde el primer momento. En CDMX puedes localizarla a través de la Fiscalía General de Justicia o del CEAVI.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Declaración Ministerial</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Tu testimonio formal ante el MP. No tienes obligación de declarar bajo presión, en condiciones de incomodidad extrema o sin la presencia de tu asesora jurídica. Puedes pedir que se detenga en cualquier momento si necesitas una pausa o asesoría.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Denuncia vs. Querella</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">La denuncia puede presentarla cualquier persona que tenga conocimiento de un delito. La querella solo puede presentarla la persona directamente afectada. En delitos de violencia sexual, algunos delitos solo pueden perseguirse si la víctima presenta querella — es decir, si tú lo decides.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Imputado / Imputada</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">La persona a quien el MP señala formalmente como probable responsable del delito. Que alguien sea imputado <strong>no significa que sea culpable</strong>: es una categoría procesal, no una condena.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Medidas Cautelares</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Órdenes que dicta el <strong>Juez</strong> para proteger tu seguridad durante el proceso. Pueden incluir prohibición de acercamiento o restricción de lugares. El no cumplirlas representa una necesidad de cambiarla por una más perjudicial para la persona imputada, que puede ser hasta la prisión preventiva justificada.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">No Ejercicio de la Acción Penal (NEAP)</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Resolución con la que el MP decide no llevar tu caso ante un juez. Puede ocurrir porque considera que no hay pruebas suficientes o que los hechos no constituyen delito. Si recibes un NEAP, tienes derecho a impugnarlo ante un Juez de Control. <strong>No es el fin del proceso.</strong></p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Archivo Temporal / Definitivo</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Resolución con la que el MP decide archivar tu denuncia por falta de pruebas o por falta de interés del asesor jurídico o víctima. Tienes derecho a impugnarlo ante un Juez de Control o ante el mismo MP solicitando que salga del archivo. <strong>No es el fin del proceso.</strong></p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Perito / Perita</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Especialista en un área técnica o científica que analiza evidencia y emite opiniones con valor legal. Los peritos pueden ser <em>oficiales</em> (del Estado) o <em>de parte</em> (contratados por la defensa o la víctima). Tener acceso a un peritaje independiente puede marcar una diferencia enorme.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Reparación del Daño</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">Obligación legal del responsable de resarcir a la víctima por los daños causados. Incluye daño físico, psicológico, patrimonial, moral y daño al proyecto de vida. Es parte de la sentencia condenatoria y <strong>no es opcional</strong>: es un derecho.</p>
-                        </div>
-
-                        <div class="glosario-item">
-                            <h4 class="font-bold text-grisAntracita text-sm">Víctima Directa vs. Víctima Indirecta</h4>
-                            <p class="text-sm text-gray-600 mt-0.5">La víctima directa es quien sufrió el daño de forma inmediata. Las víctimas indirectas son familiares o personas cercanas que también resultan afectadas. Ambas tienen reconocimiento legal y acceso a derechos dentro del proceso, incluyendo la reparación del daño.</p>
-                        </div>
-
-                    </div>
-
-
+                    <h3 class="font-seccion font-bold text-xl text-grisAntracita mb-3">Derechos en delitos sexuales</h3>
+                    <ul class="space-y-3 font-texto text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-moradoMedio mt-1"></i> <strong>Resguardo de identidad:</strong> Tus datos personales deben mantenerse en absoluta confidencialidad.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-moradoMedio mt-1"></i> A recibir atención médica y psicológica de emergencia en cualquier hospital (NOM-046).</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-moradoMedio mt-1"></i> A que tus peritajes se realicen con perspectiva de género, sin juzgar tu vida sexual previa.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> <strong>No puedes ser obligada/o</strong> a confrontarte físicamente (careo) con tu agresor en ningún momento.</li>
+                    </ul>
                 </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-azulCielo transition hover:shadow-lg">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-azulCielo mb-4 text-xl">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="font-seccion font-bold text-xl text-grisAntracita mb-3">¿Y si el Ministerio Público falla?</h3>
+                    <p class="font-texto text-sm text-gray-700 mb-3">El MP no es tu jefe, es tu representante. Si retrasa tu investigación, se niega a recibir tus pruebas, no solicita órdenes de aprehensión o intenta archivar tu caso, no es el fin del camino.</p>
+                    <ul class="space-y-3 font-texto text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-azulCielo mt-1"></i> Tienes derecho a impugnar sus omisiones ante un Juez de Control (Art. 258 CNPP) para obligarlo a hacer su trabajo.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-azulCielo mt-1"></i> Puedes interponer quejas ante la Visitaduría General o Derechos Humanos por negligencia.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-doradoSuave transition hover:shadow-lg">
+                    <div class="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center text-yellow-600 mb-4 text-xl">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="font-seccion font-bold text-xl text-grisAntracita mb-3">Si eres imputada, tus derechos</h3>
+                    <p class="font-texto text-sm text-gray-700 mb-3">El sistema frecuentemente criminaliza a las mujeres y disidencias que se defienden de la violencia. Si te acusan de un delito, tus derechos son inalienables:</p>
+                    <ul class="space-y-3 font-texto text-sm text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-yellow-600 mt-1"></i> Derecho a la <strong>presunción de inocencia</strong> y a no ser incomunicada.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-yellow-600 mt-1"></i> Tienes derecho a guardar silencio, y ese silencio <strong>no puede usarse en tu contra</strong>.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-yellow-600 mt-1"></i> A saber exactamente de qué se te acusa y quién te acusa.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-yellow-600 mt-1"></i> A contar con una <strong>defensa técnica adecuada</strong>, libre de prejuicios morales.</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 2 — DERECHOS COMO VÍCTIMA
-        ════════════════════════════════════════════════ -->
-        <section id="derechos-victima" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-teal-100 p-6 hover:shadow-md transition-all group-hover:border-verdeEsperanza">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-shield-halved text-2xl text-verdeEsperanza"></i>
-                        </div>
-                        <div>
-                            <span class="section-tag bg-teal-100 text-teal-700 mb-1">Para víctimas</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">Derechos como Víctima</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">Lo que nadie te explica cuando llegas a denunciar.</p>
-                        </div>
+        <section class="fade-in pt-8">
+            
+            <div class="bg-white rounded-2xl shadow-md border border-gray-200 p-8 sm:p-10 relative overflow-hidden mb-10">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-azulOceano to-verdeEsperanza"></div>
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-azulOceano text-xl flex-shrink-0">
+                        <i class="fa-solid fa-book-open"></i>
                     </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-verdeEsperanza accordion-icon ml-4 flex-shrink-0"></i>
+                    <div>
+                        <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">Las herramientas contra los sesgos</h2>
+                        <p class="font-texto text-sm text-gray-500">Protocolos de actuación de la SCJN</p>
+                    </div>
                 </div>
-            </button>
-
-            <div class="accordion-content">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-teal-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <p class="text-gray-600 mb-6 italic border-l-4 border-verdeEsperanza pl-4 max-w-3xl">La ley mexicana te otorga derechos desde el momento en que decides denunciar — incluso antes de que abran tu carpeta. El problema es que casi nadie te los informa. Aquí están, en palabras claras.</p>
-
-                    <div class="space-y-4">
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">1</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A recibir asesoría jurídica gratuita desde el primer momento</h3>
-                                    <p class="text-sm text-gray-600">Tienes derecho a que una Asesora Jurídica de Víctimas (AJV) esté contigo desde que pisas el Ministerio Público. No es lo mismo que la agente del MP: la AJV trabaja exclusivamente para ti y para la defensa de tus intereses. Si no te la ofrecen, puedes exigirla. Su servicio es gratuito y está garantizado por el <strong>artículo 20 constitucional, Apartado C, fracción I.</strong></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">2</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A que te informen qué está pasando con tu caso</h3>
-                                    <p class="text-sm text-gray-600">El MP está obligado a informarte el estado de tu carpeta de investigación cada vez que lo solicites. No tienes que esperar a que te llamen. Puedes ir, preguntar y exigir respuesta. Si no te dan acceso, puedes solicitar copias de tu carpeta de forma directa. Nadie puede negarte conocer tu propio caso.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">3</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A no confrontar a tu agresor</h3>
-                                    <p class="text-sm text-gray-600">Durante la investigación y el juicio, tienes derecho a declarar sin estar en el mismo espacio físico que la persona que te agredió. Existen mecanismos legales — como el uso de biombos, videoconferencia o salas especiales — para protegerte de una confrontación directa. Si alguien te dice que "tienes que carear con él", está equivocado o te está mintiendo.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">4</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A que te traten con dignidad</h3>
-                                    <p class="text-sm text-gray-600">Cualquier funcionaria o funcionario que te atienda tiene <strong>prohibido</strong> cuestionarte sobre tu vida sexual pasada, tu forma de vestir, tu estado de ebriedad o cualquier conducta anterior a la agresión. Estas preguntas no son parte del proceso legal: son revictimización. Tienes derecho a negarte a responderlas y a levantar una queja formal si ocurren.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">5</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A la reparación del daño</h3>
-                                    <p class="text-sm text-gray-600">Si el proceso concluye con sentencia condenatoria, tienes derecho a que el Estado exija al responsable la reparación del daño causado — incluyendo daño físico, psicológico, material y de proyecto de vida. Esto no es opcional ni un extra: es una obligación legal del sistema de justicia.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">6</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A la protección inmediata de tu seguridad</h3>
-                                    <p class="text-sm text-gray-600">Desde el momento en que presentas tu denuncia, puedes solicitar <strong>Medidas de Protección</strong>. El MP está obligado a dictarlas de forma inmediata si existe riesgo para tu integridad. No tienes que esperar semanas ni demostrar "suficiente peligro": el riesgo que tú describes es suficiente para activarlas.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-teal-50 p-5 rounded-xl" style="border-left-color: #42c3d9;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-verdeEsperanza rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">7</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A acceder al proceso aunque no quieras denunciar formalmente</h3>
-                                    <p class="text-sm text-gray-600">Si solo quieres información, orientación o acceso a servicios de salud, <strong>no estás obligada a presentar una denuncia</strong>. Los servicios de atención médica, psicológica y jurídica pueden activarse sin que exista una carpeta de investigación abierta. Nadie puede condicionarte la atención a cambio de que denuncies.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Recursos descargables -->
-                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <a href="https://drive.google.com/file/d/19kmhM7getwORM85vRh7RHu7tsqeNz-Ws/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-teal-50 border border-teal-200 rounded-xl p-4 hover:bg-teal-100 transition group">
-                            <div class="w-10 h-10 bg-verdeEsperanza rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-file-pdf text-white"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-grisAntracita text-sm group-hover:text-verdeEsperanza transition">Primeros Auxilios Psicológicos</p>
-                                <p class="text-xs text-gray-500">Descarga la guía en PDF</p>
-                            </div>
-                            <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-teal-400 group-hover:text-verdeEsperanza transition"></i>
-                        </a>
-                        <a href="https://drive.google.com/file/d/17FibaCRuq0yHQHuNmVrQiHrVb7OYx0ym/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-teal-50 border border-teal-200 rounded-xl p-4 hover:bg-teal-100 transition group">
-                            <div class="w-10 h-10 bg-verdeEsperanza rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-file-lines text-white"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-grisAntracita text-sm group-hover:text-verdeEsperanza transition">Bitácora / Registro de Hechos</p>
-                                <p class="text-xs text-gray-500">Descarga tu bitácora de documentación</p>
-                            </div>
-                            <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-teal-400 group-hover:text-verdeEsperanza transition"></i>
-                        </a>
-                    </div>
-
-                    <div class="mt-6 bg-purple-50 border border-purple-100 rounded-xl p-4">
-                        <p class="text-xs text-gray-600"><i class="fa-solid fa-balance-scale text-azulOceano mr-2"></i><strong>Fundamento legal:</strong> Artículo 20 Apartado C de la Constitución Política de los Estados Unidos Mexicanos, Ley General de Acceso de las Mujeres a una Vida Libre de Violencia (LGAMVLV) y Ley General de Víctimas.</p>
-                    </div>
-
+                <div class="font-texto text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                        Los cuatro protocolos emitidos por la Suprema Corte de Justicia de la Nación (SCJN) — <strong>Género, Infancia, Vejez y Discapacidad</strong> — comparten una premisa ineludible: <em>el sistema de justicia tiene sesgos estructurales que producen resultados injustos si no se corrigen activamente.</em>
+                    </p>
+                    <p>
+                        El derecho históricamente ha sido diseñado desde una perspectiva adulta, masculina, capacitista y sin tomar en cuenta el curso de vida. Aplicar estas perspectivas <strong>no es una concesión opcional ni un favor de la autoridad</strong>; es una obligación constitucional. Conocer estas metodologías es vital: al exigir su aplicación no pides un trato especial, exiges que el proceso se adapte a tu realidad.
+                    </p>
                 </div>
             </div>
-        </section>
 
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 3 — DERECHOS EN DELITOS SEXUALES
-        ════════════════════════════════════════════════ -->
-        <section id="derechos-sexuales" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-yellow-100 p-6 hover:shadow-md transition-all group-hover:border-doradoSuave">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-star text-2xl text-yellow-600"></i>
+            <div class="space-y-6">
+                
+                <details class="group bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                    <summary class="flex justify-between items-center font-seccion font-bold text-xl cursor-pointer p-6 text-azulOceano hover:bg-purple-50 transition">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-moradoMedio text-lg">
+                                <i class="fa-solid fa-venus-mars"></i>
+                            </div>
+                            <span>1. Perspectiva de Género</span>
                         </div>
-                        <div>
-                            <span class="section-tag bg-yellow-100 text-yellow-700 mb-1">Derechos específicos</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">Derechos en Casos de Delitos Sexuales</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">En violencia sexual, la ley va más lejos. Esto es lo que el sistema está obligado a darte.</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-yellow-600 accordion-icon ml-4 flex-shrink-0"></i>
-                </div>
-            </button>
+                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 sm:p-8 border-t border-gray-100 bg-gray-50/50">
+                        <h3 class="font-titulo1 font-bold text-2xl text-moradoMedio mb-2">La justicia no es ciega ante la desigualdad</h3>
+                        <p class="font-texto text-sm text-gray-500 font-semibold mb-6 uppercase tracking-wide">El género importa en el estrado.</p>
+                        
+                        <div class="space-y-5 font-texto text-gray-700 leading-relaxed">
+                            <p><strong>¿Qué es?</strong> Es una herramienta analítica que obliga a las autoridades a identificar los impactos diferenciados que las normas, prácticas y estereotipos de género tienen sobre las personas. Su objetivo es detectar asimetrías de poder y situaciones de vulnerabilidad basadas en el género, la orientación sexual o la identidad, para evitar que el proceso judicial reproduzca la discriminación.</p>
+                            
+                            <div class="bg-purple-50 border-l-4 border-moradoMedio p-5 rounded-r-xl my-4">
+                                <p class="font-seccion font-bold text-purple-900 text-sm mb-1"><i class="fa-solid fa-circle-exclamation mr-2"></i>Aclaración crucial</p>
+                                <p class="text-sm text-purple-800">La perspectiva de género <strong>no aplica exclusivamente a las mujeres</strong>, ni es un mecanismo diseñado para beneficiar o poner en desventaja injustificada a nadie. Su único propósito es nivelar la balanza, identificando y corrigiendo asimetrías de poder y roles impuestos socialmente, para que el sistema sea verdaderamente equitativo.</p>
+                            </div>
 
-            <div class="accordion-content">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-yellow-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <p class="text-gray-600 mb-6 italic border-l-4 border-doradoSuave pl-4 max-w-3xl">Los delitos de violencia sexual activaron en México un marco legal específico que va más allá del proceso penal ordinario. Estos derechos existen. El problema es que pocas instituciones los aplican de forma proactiva.</p>
-
-                    <!-- Alerta urgencia -->
-                    <div class="alerta-urgencia rounded-xl p-5 mb-6 text-white">
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-hospital text-2xl flex-shrink-0 mt-0.5"></i>
-                            <div>
-                                <h3 class="font-bold text-base mb-1">Atención médica inmediata — Sin necesidad de denuncia</h3>
-                                <p class="text-sm text-red-100">La <strong class="text-white">NOM-046-SSA2-2005</strong> obliga a todos los servicios de salud — públicos y privados — a brindarte atención médica de urgencia sin que esperes. Incluye: tratamiento de lesiones, pruebas de VIH y otras ITS, anticoncepción de emergencia e interrupción legal del embarazo. <strong class="text-white">Solo debes mencionar lo sucedido y están obligados a atenderte de inmediato.</strong> Si un hospital te exige denuncia previa, está incumpliendo la ley.</p>
+                            <p><strong>¿Por qué importa en casos de violencia?</strong> Porque el sistema judicial frecuentemente desacredita basándose en prejuicios. Cuando a una víctima de agresión sexual se le cuestiona por su vestimenta, su historial sexual o por "no haber gritado", el sistema está operando bajo estereotipos. Esta perspectiva obliga al juzgador a desechar esos prejuicios al valorar las pruebas.</p>
+                            
+                            <div class="bg-white p-5 rounded-xl border border-gray-200 mt-6">
+                                <h4 class="font-seccion font-bold text-grisAntracita text-sm mb-3">Fundamento Jurídico</h4>
+                                <div class="flex flex-wrap">
+                                    <span class="fundamento-tag">CPEUM / Art. 1 y 4</span>
+                                    <span class="fundamento-tag">CEDAW</span>
+                                    <span class="fundamento-tag">Convención de Belém do Pará</span>
+                                    <span class="fundamento-tag">Protocolo SCJN (2020)</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </details>
 
-                    <div class="space-y-4">
-
-                        <div class="derecho-card bg-yellow-50 p-5 rounded-xl" style="border-left-color: #fcc352;">
-                            <h3 class="font-bold text-grisAntracita text-base mb-1.5"><i class="fa-solid fa-circle-check text-yellow-600 mr-2"></i>Derecho a la interrupción legal del embarazo producto de una violación</h3>
-                            <p class="text-sm text-gray-600">En todo el territorio mexicano, el embarazo resultado de una violación es una causal reconocida para la interrupción legal del embarazo. Está reconocida en los códigos penales de <strong>todas</strong> las entidades federativas. Tienes derecho a solicitarlo en cualquier hospital público sin denuncia previa, con solo tu declaración de los hechos. Si te niegan este derecho, puedes reportarlo a la Comisión Nacional de Derechos Humanos (CNDH).</p>
+                <details class="group bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                    <summary class="flex justify-between items-center font-seccion font-bold text-xl cursor-pointer p-6 text-azulOceano hover:bg-teal-50 transition">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center text-verdeEsperanza text-lg">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+                            <span>2. Perspectiva de Infancia</span>
                         </div>
-
-                        <div class="derecho-card bg-yellow-50 p-5 rounded-xl" style="border-left-color: #fcc352;">
-                            <h3 class="font-bold text-grisAntracita text-base mb-1.5"><i class="fa-solid fa-circle-check text-yellow-600 mr-2"></i>Derecho a no repetir tu declaración innecesariamente</h3>
-                            <p class="text-sm text-gray-600">En casos de violencia sexual, el sistema está obligado a evitar la revictimización procesal. Tu declaración puede videograbarse para ser usada en distintas etapas del proceso sin necesidad de que la repitas. Si el MP o el personal médico te pide que cuentes los hechos múltiples veces sin justificación, tienes derecho a negarte y a solicitar que se use tu declaración previa. <em class="text-gray-500">(Nota: esto es poco común en la práctica, pero es tu derecho exigirlo.)</em></p>
-                        </div>
-
-                        <div class="derecho-card bg-yellow-50 p-5 rounded-xl" style="border-left-color: #fcc352;">
-                            <h3 class="font-bold text-grisAntracita text-base mb-1.5"><i class="fa-solid fa-circle-check text-yellow-600 mr-2"></i>Derecho a una perita o médica del mismo sexo</h3>
-                            <p class="text-sm text-gray-600">Durante los peritajes ginecológicos o cualquier exploración física relacionada con la agresión, puedes solicitar que la persona que te examine sea mujer. Este derecho no siempre es informado de forma espontánea, pero existe y puedes exigirlo.</p>
-                        </div>
-
-                        <div class="derecho-card bg-yellow-50 p-5 rounded-xl" style="border-left-color: #fcc352;">
-                            <h3 class="font-bold text-grisAntracita text-base mb-1.5"><i class="fa-solid fa-circle-check text-yellow-600 mr-2"></i>Derecho a que no se cuestione tu conducta previa</h3>
-                            <p class="text-sm text-gray-600">Ninguna autoridad puede usar tu historial sexual, tu forma de vestir, tu consumo de alcohol u otras conductas anteriores como argumento para minimizar el delito o cuestionar tu credibilidad. Esto está expresamente prohibido en el Protocolo de Actuación para quienes Imparten Justicia. Si ocurre, es material para una queja formal.</p>
-                        </div>
-
-                        <div class="derecho-card bg-yellow-50 p-5 rounded-xl" style="border-left-color: #fcc352;">
-                            <h3 class="font-bold text-grisAntracita text-base mb-1.5"><i class="fa-solid fa-circle-check text-yellow-600 mr-2"></i>Derecho a la atención psicológica especializada</h3>
-                            <p class="text-sm text-gray-600">Las instituciones de atención a víctimas de violencia sexual están obligadas a ofrecer acompañamiento psicológico especializado de forma gratuita. Esto incluye los Centros de Atención Integral a Víctimas de Género (CAIV-Género) en CDMX y sus equivalentes en los estados. No es un servicio opcional: es parte de la reparación integral a la que tienes derecho desde el inicio del proceso.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="mt-6 bg-yellow-50 border border-yellow-200 rounded-xl p-4 flex items-start gap-3">
-                        <i class="fa-solid fa-hands-holding-heart text-yellow-600 text-xl flex-shrink-0 mt-0.5"></i>
-                        <p class="text-sm text-gray-600">Conocer estos derechos no elimina las fallas del sistema. Pero sí cambia la posición desde la que enfrentas esas fallas. <strong>En Cosiendo Alas estamos aquí para acompañarte a exigirlos.</strong></p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 4 — SI EL MP FALLA
-        ════════════════════════════════════════════════ -->
-        <section id="mp-falla" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-red-100 p-6 hover:shadow-md transition-all group-hover:border-red-400">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-triangle-exclamation text-2xl text-red-500"></i>
-                        </div>
-                        <div>
-                            <span class="section-tag bg-red-100 text-red-700 mb-1">Correctivos institucionales</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">¿Y si el MP te falla?</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">El sistema tiene fallas. También tiene correctivos. Aquí están.</p>
+                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 sm:p-8 border-t border-gray-100 bg-gray-50/50">
+                        <h3 class="font-titulo1 font-bold text-2xl text-verdeEsperanza mb-2">Sujetos plenos de derechos, no objetos de protección</h3>
+                        <p class="font-texto text-sm text-gray-500 font-semibold mb-6 uppercase tracking-wide">La eliminación del adultocentrismo procesal.</p>
+                        
+                        <div class="space-y-5 font-texto text-gray-700 leading-relaxed">
+                            <p><strong>¿Qué es?</strong> Es la obligación de las autoridades de garantizar el <em>interés superior de la niñez</em> en cualquier proceso donde intervengan niñas, niños y adolescentes (NNA). Exige adaptar el entorno, el lenguaje y los tiempos judiciales a su nivel de desarrollo cognitivo y emocional, garantizando su derecho a ser escuchados sin manipulación ni presión.</p>
+                            
+                            <p><strong>¿Por qué importa en casos de violencia?</strong> La violencia sexual infantil suele ser desestimada bajo el sesgo adultocentrista de que "los niños inventan cosas" o "son manipulados por sus padres". La perspectiva de infancia prohíbe desacreditar el testimonio de un NNA únicamente por su edad y obliga a realizar las entrevistas en espacios seguros (como salas lúdicas o cámara Gesell), evitando interrogatorios repetitivos que generen revictimización institucional.</p>
+                            
+                            <div class="bg-white p-5 rounded-xl border border-gray-200 mt-6">
+                                <h4 class="font-seccion font-bold text-grisAntracita text-sm mb-3">Fundamento Jurídico</h4>
+                                <div class="flex flex-wrap">
+                                    <span class="fundamento-tag">CPEUM / Art. 4</span>
+                                    <span class="fundamento-tag">Convención sobre los Derechos del Niño (CDN)</span>
+                                    <span class="fundamento-tag">Ley General de los Derechos de NNA</span>
+                                    <span class="fundamento-tag">Protocolo SCJN (2021)</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-red-500 accordion-icon ml-4 flex-shrink-0"></i>
-                </div>
-            </button>
+                </details>
 
-            <div class="accordion-content">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-red-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <p class="text-gray-600 mb-6 italic border-l-4 border-red-400 pl-4 max-w-3xl">Que el Ministerio Público no actúe como debería no significa que el proceso terminó. Existen mecanismos diseñados precisamente para cuando las instituciones fallan. <strong>Conocerlos es poder.</strong></p>
-
-                    <div class="space-y-5">
-
-                        <div class="bg-red-50 border border-red-100 rounded-xl p-5">
-                            <h3 class="font-bold text-red-800 text-base mb-2 flex items-center gap-2">
-                                <span class="w-7 h-7 bg-red-200 rounded-full flex items-center justify-center text-xs font-bold text-red-800">1</span>
-                                El MP no quiere abrir tu carpeta o te pide que regreses después
-                            </h3>
-                            <p class="text-sm text-gray-600 mb-3">Esto es <strong>ilegal</strong>. El MP tiene la obligación de recibir tu denuncia en el momento en que la presentas, sin importar la hora, el día o el tipo de delito. Si te niegan la atención o te condicionan a regresar, tienes opciones inmediatas:</p>
-                            <ul class="space-y-2 text-sm text-gray-700">
-                                <li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-red-400 mt-1 text-xs flex-shrink-0"></i>Solicitar hablar con el supervisor de guardia y dejar constancia escrita del rechazo.</li>
-                                <li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-red-400 mt-1 text-xs flex-shrink-0"></i>Llamar a la Comisión de Atención a Víctimas (CEAVI en CDMX) o a la Visitaduría General de la Fiscalía para reportar el bloqueo.</li>
-                                <li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-red-400 mt-1 text-xs flex-shrink-0"></i><strong>Usar el teléfono rojo</strong> que está en todas las fiscalías — es una línea directa con el Órgano Interno de Control (OIC), quien vigila y sanciona el actuar del MP.</li>
+                <details class="group bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                    <summary class="flex justify-between items-center font-seccion font-bold text-xl cursor-pointer p-6 text-azulOceano hover:bg-yellow-50 transition">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-doradoSuave text-lg">
+                                <i class="fa-solid fa-person-cane"></i>
+                            </div>
+                            <span>3. Perspectiva de Vejez</span>
+                        </div>
+                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 sm:p-8 border-t border-gray-100 bg-gray-50/50">
+                        <h3 class="font-titulo1 font-bold text-2xl text-doradoSuave mb-2">Envejecer no reduce tus derechos.</h3>
+                        <p class="font-texto text-sm text-gray-500 font-semibold mb-6 uppercase tracking-wide">El sistema está obligado a verlo.</p>
+                        
+                        <div class="space-y-5 font-texto text-gray-700 leading-relaxed">
+                            <p>La edad avanzada es una categoría que el sistema de justicia con frecuencia invisibiliza o trata como sinónimo de incapacidad. La perspectiva de vejez corrige eso: exige que quien imparte justicia identifique cómo la edad genera condiciones específicas de vulnerabilidad estructural que afectan el acceso a la justicia y el ejercicio de los derechos.</p>
+                            
+                            <p><strong>¿Qué es?</strong><br>Es un método de análisis que obliga a las autoridades a identificar si la edad avanzada de alguna de las partes está generando una desigualdad estructural. No se trata de tratar a las personas mayores como incapaces o con lástima, sino de reconocer los sesgos etarios en su contra.</p>
+                            
+                            <p>En términos prácticos, aplicar esta perspectiva significa preguntarse:</p>
+                            <ul class="list-disc pl-6 space-y-2 text-sm">
+                                <li>¿Las condiciones del proceso (horarios, espacios, lenguaje) crean barreras de acceso para una persona mayor?</li>
+                                <li>¿Su testimonio está siendo desestimado por estereotipos sobre la memoria en la vejez en lugar de razones probatorias reales?</li>
+                                <li>¿Su situación de dependencia es relevante para entender los hechos de violencia intrafamiliar o patrimonial?</li>
                             </ul>
-                        </div>
 
-                        <div class="bg-red-50 border border-red-100 rounded-xl p-5">
-                            <h3 class="font-bold text-red-800 text-base mb-2 flex items-center gap-2">
-                                <span class="w-7 h-7 bg-red-200 rounded-full flex items-center justify-center text-xs font-bold text-red-800">2</span>
-                                El MP no avanza con la investigación / Está archivando tu caso
-                            </h3>
-                            <p class="text-sm text-gray-600">Si sientes que tu caso está estancado, puedes solicitar formalmente el <strong>Control Judicial de la Carpeta</strong>. Esto significa llevar tu caso ante un Juez de Control para que supervise si el MP está cumpliendo con sus obligaciones. El juez puede <em>obligar al MP a actuar</em> (investigar, solicitar peritajes, recabar entrevistas de testigos), aunque no puede obligarlo a ejercer acción penal. Este recurso existe precisamente para los casos en que la Fiscalía no investiga con la diligencia que corresponde.</p>
-                        </div>
+                            <p><strong>¿Por qué importa en casos de violencia?</strong><br>Porque el sistema tiende a no creer a las víctimas mayores o a tratar su situación como un "problema de salud" y no de justicia. Cuestionar un testimonio diciendo <em>"a su edad es normal confundirse"</em> es discriminación pura y dura.</p>
 
-                        <div class="bg-red-50 border border-red-100 rounded-xl p-5">
-                            <h3 class="font-bold text-red-800 text-base mb-2 flex items-center gap-2">
-                                <span class="w-7 h-7 bg-red-200 rounded-full flex items-center justify-center text-xs font-bold text-red-800">3</span>
-                                Un funcionario te trató mal, te revictimizó u obstaculizó
-                            </h3>
-                            <p class="text-sm text-gray-600">Puedes presentar una <strong>queja formal ante la Visitaduría General de la Fiscalía General de Justicia</strong> de tu estado. En CDMX, también puedes acudir a la <strong>Comisión de Derechos Humanos de la Ciudad de México (CDHCM)</strong>, que puede emitir recomendaciones vinculantes cuando detecta violaciones a tus derechos durante el proceso. Una queja no cancela tu carpeta de investigación: ambas cosas avanzan en paralelo.</p>
-                        </div>
-
-                        <div class="bg-red-50 border border-red-100 rounded-xl p-5">
-                            <h3 class="font-bold text-red-800 text-base mb-2 flex items-center gap-2">
-                                <span class="w-7 h-7 bg-red-200 rounded-full flex items-center justify-center text-xs font-bold text-red-800">4</span>
-                                Recuerda: tienes derecho a una Asesora Jurídica de Víctimas (AJV)
-                            </h3>
-                            <p class="text-sm text-gray-600">La AJV es una figura completamente distinta a la agente del MP. La AJV trabaja <em>para ti</em>, no para el Estado. Idealmente la conocerás desde el momento en que realices tu denuncia — desde ese momento te asignarán una asesora que será tu representante legal en la fiscalía. Este servicio también lo proporciona la fiscalía de forma gratuita.</p>
-                            <div class="mt-3 bg-white border border-red-200 rounded-lg p-3">
-                                <p class="text-sm text-grisAntracita font-semibold"><i class="fa-brands fa-whatsapp text-verdeEsperanza mr-2"></i>En Cosiendo Alas también podemos acompañarte en este proceso. <a href="https://wa.me/525535538561?text=Hola,%20necesito%20orientación%20legal%20de%20Cosiendo%20Alas" target="_blank" class="text-azulOceano hover:underline">Escríbenos.</a></p>
+                            <div class="bg-yellow-50 border-l-4 border-doradoSuave p-5 rounded-r-xl my-4">
+                                <p class="font-seccion font-bold text-yellow-800 text-sm mb-1"><i class="fa-solid fa-circle-info mr-2"></i>La Convención Interamericana</p>
+                                <p class="text-sm text-yellow-900">México ratificó en 2021 la <strong>Convención Interamericana sobre la Protección de los Derechos Humanos de las Personas Mayores (CIDHPM)</strong>. Es el primer tratado vinculante específico en la materia. Citarlo es fundamental para exigir el derecho de acceso a la justicia (Art. 31).</p>
+                            </div>
+                            
+                            <div class="bg-white p-5 rounded-xl border border-gray-200 mt-6">
+                                <h4 class="font-seccion font-bold text-grisAntracita text-sm mb-3">Fundamento Jurídico</h4>
+                                <div class="flex flex-wrap">
+                                    <span class="fundamento-tag">CPEUM / Art. 1</span>
+                                    <span class="fundamento-tag">CIDHPM / Arts. 3, 4, 5, 9 y 31</span>
+                                    <span class="fundamento-tag">CADH / Arts. 1 y 24</span>
+                                    <span class="fundamento-tag">LGAMVLV / Art. 9, fracc. VII</span>
+                                    <span class="fundamento-tag">Protocolo SCJN (2023)</span>
+                                </div>
                             </div>
                         </div>
-
                     </div>
+                </details>
 
-                    <div class="mt-6 bg-gray-50 border border-gray-200 rounded-xl p-4">
-                        <p class="text-sm text-gray-600"><i class="fa-solid fa-circle-info text-gray-400 mr-2"></i><strong>Nota importante:</strong> Ninguno de estos mecanismos garantiza resultados perfectos. Lo que sí hacen es crear registros, presión institucional y evidencia de que el Estado no cumplió con su obligación — y eso, en procesos más largos, importa.</p>
+                <details class="group bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                    <summary class="flex justify-between items-center font-seccion font-bold text-xl cursor-pointer p-6 text-azulOceano hover:bg-cyan-50 transition">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center text-turquesaClaro text-lg">
+                                <i class="fa-solid fa-wheelchair"></i>
+                            </div>
+                            <span>4. Perspectiva de Discapacidad</span>
+                        </div>
+                        <span class="transition group-open:rotate-180 text-gray-400"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="p-6 sm:p-8 border-t border-gray-100 bg-gray-50/50">
+                        <h3 class="font-titulo1 font-bold text-2xl text-turquesaClaro mb-2">La barrera está en el sistema, no en la persona.</h3>
+                        <p class="font-texto text-sm text-gray-500 font-semibold mb-6 uppercase tracking-wide">La discapacidad no es una limitación legal.</p>
+                        
+                        <div class="space-y-5 font-texto text-gray-700 leading-relaxed">
+                            <p>El modelo social de la discapacidad parte de una premisa fundamental: la discapacidad no está en la persona, está en las barreras que el entorno construye. Cuando el sistema de justicia no hace los ajustes necesarios para que alguien pueda participar en igualdad de condiciones, el problema es del sistema, no de la persona.</p>
+                            
+                            <p><strong>¿Qué es?</strong><br>Es el análisis que exige identificar si la discapacidad física, sensorial, intelectual o psicosocial está generando barreras de acceso que deben eliminarse mediante <em>ajustes razonables</em> (como intérpretes de LSM, formatos de lectura fácil o espacios accesibles) y apoyo en la toma de decisiones sin sustituir la voluntad de la persona.</p>
+                            
+                            <p><strong>Un cambio de paradigma:</strong><br>La ley mexicana cambió el modelo de "sustitución de la voluntad" (donde un tutor decidía). Ahora, <strong>nadie puede sustituir la voluntad de una persona con discapacidad.</strong> El Estado debe proveer los apoyos para que ejerza su propia voluntad. Tienen derecho a declarar, a ser creídas y a participar activamente en su proceso penal.</p>
+
+                            <p><strong>¿Por qué importa en casos de violencia sexual?</strong><br>Porque las personas con discapacidad, especialmente mujeres y niñas, son víctimas de violencia sexual a tasas significativamente más altas en entornos de cuidado, y el sistema tiende a considerar que su testimonio "no tiene valor probatorio" por su discapacidad. Eso no es análisis jurídico, es discriminación punible.</p>
+                            
+                            <div class="bg-white p-5 rounded-xl border border-gray-200 mt-6">
+                                <h4 class="font-seccion font-bold text-grisAntracita text-sm mb-3">Fundamento Jurídico</h4>
+                                <div class="flex flex-wrap">
+                                    <span class="fundamento-tag">CPEUM / Art. 1</span>
+                                    <span class="fundamento-tag">Convención sobre los Derechos de las Personas con Discapacidad (CDPD)</span>
+                                    <span class="fundamento-tag">CNPP / Art. 109, fracc. XII</span>
+                                    <span class="fundamento-tag">LGAMVLV / Art. 9, fracc. V</span>
+                                    <span class="fundamento-tag">Protocolo SCJN (2021)</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </details>
 
-                </div>
             </div>
         </section>
-
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 5 — DERECHOS COMO IMPUTADA
-        ════════════════════════════════════════════════ -->
-        <section id="derechos-imputada" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-blue-100 p-6 hover:shadow-md transition-all group-hover:border-azulCielo">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-scale-balanced text-2xl text-azulCielo"></i>
-                        </div>
-                        <div>
-                            <span class="section-tag bg-blue-100 text-blue-700 mb-1">Para imputadas</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">Si Eres Imputada — Tus Derechos</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">Ser señalada no te quita derechos. El sistema está obligado a tratarte con garantías.</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-azulCielo accordion-icon ml-4 flex-shrink-0"></i>
-                </div>
-            </button>
-
-            <div class="accordion-content">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-blue-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <p class="text-gray-600 mb-6 italic border-l-4 border-azulCielo pl-4 max-w-3xl">En México, el sistema de justicia con frecuencia criminaliza a quienes actuaron para proteger su propia vida, a quienes fueron acusadas falsamente como represalia, o a quienes simplemente no tuvieron acceso a una defensa técnica de calidad. Conocer tus derechos procesales es el primer escudo.</p>
-
-                    <!-- Contenido original (sección imputada) -->
-                    <div class="mb-6 bg-blue-50 border border-blue-100 rounded-xl p-5">
-                        <p class="text-sm text-gray-700">Sabemos que el sistema de justicia en México no es neutral. Frecuentemente, <strong>criminaliza a mujeres, disidencias e individuos en situaciones de vulnerabilidad</strong>, fabricando culpables o ignorando contextos de legítima defensa. En Cosiendo Alas ofrecemos defensa penal técnica, empática y <strong>estrictamente con perspectiva de género</strong>. No te juzgamos; construimos una estrategia legal sólida para exigir justicia y garantizar tus derechos procesales.</p>
-                    </div>
-
-                    <div class="space-y-4">
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">1</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A la presunción de inocencia</h3>
-                                    <p class="text-sm text-gray-600">Mientras no exista una sentencia condenatoria firme, eres inocente. Esto no es una frase retórica: es un principio constitucional (<strong>artículo 20, Apartado B, fracción I</strong>) que obliga a todas las autoridades a tratarte como tal. La presunción de inocencia se viola cuando se te trata como culpable antes de la sentencia, cuando se filtran datos de tu caso a medios o cuando se te niegan derechos procesales bajo el argumento de que "es obvio que lo hiciste".</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">2</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A no declarar contra ti misma</h3>
-                                    <p class="text-sm text-gray-600">Tienes el derecho absoluto a guardar silencio. Nadie puede obligarte a declarar, a responder preguntas o a proporcionar información que pueda usarse en tu contra. Este derecho aplica desde el momento de tu detención. Si declaras bajo presión, coacción o sin la presencia de tu defensora, esa declaración puede ser impugnada.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">3</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A una defensa adecuada desde el primer momento</h3>
-                                    <p class="text-sm text-gray-600">Tienes derecho a ser asistida por una defensora o defensor de tu elección desde que eres detenida o citada. Si no puedes pagar una defensa particular, el Estado está obligado a asignarte una <strong>Defensora Pública</strong> de forma gratuita. Tienes derecho a que tu defensora sea competente y activa — si sientes que no está haciendo su trabajo, puedes solicitar su sustitución.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">4</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A conocer los cargos que se te imputan</h3>
-                                    <p class="text-sm text-gray-600">Tienes derecho a saber, de forma clara y en lenguaje comprensible, de qué se te acusa, cuáles son las pruebas en tu contra y quién te acusa. No pueden mantenerte en incertidumbre sobre la naturaleza de los cargos. Esta información debe dártela el MP desde el inicio, no cuando el proceso ya esté avanzado.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">5</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A ofrecer pruebas y a que sean consideradas</h3>
-                                    <p class="text-sm text-gray-600">El proceso penal es adversarial: tienes el mismo derecho que la contraparte a presentar pruebas, a ofrecer peritos propios y a interrogar a los testigos de cargo. Una defensa técnica sólida trabaja activamente en este espacio, no solo reaccionando a lo que presenta el MP.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">6</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A que tu contexto sea considerado — No solo los hechos aislados</h3>
-                                    <p class="text-sm text-gray-600">Aquí entra la perspectiva de género como herramienta de defensa. Si actuaste en un contexto de violencia previa, de amenaza a tu integridad, de desigualdad estructural o de subordinación, la ley y la jurisprudencia de la SCJN reconocen que ese contexto es jurídicamente relevante. No es una excusa: es parte del análisis legal que cualquier juzgador está obligado a hacer.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="derecho-card bg-blue-50 p-5 rounded-xl" style="border-left-color: #53a0cc;">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-azulCielo rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-white font-bold text-xs">7</span>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-grisAntracita text-base mb-1">A un proceso sin dilaciones injustificadas</h3>
-                                    <p class="text-sm text-gray-600">Tienes derecho a que tu proceso avance en los plazos que establece la ley. La prisión preventiva tiene límites temporales. Si llevas tiempo detenida sin que el proceso avance, tu defensa puede invocar el <strong>principio de plazo razonable</strong> para exigir resolución.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Video + CTA (contenido original) -->
-                    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 flex flex-col justify-between">
-                            <p class="text-sm text-gray-700 mb-4">En Cosiendo Alas ofrecemos acompañamiento legal con perspectiva de género para mujeres y disidencias imputadas, especialmente en casos donde el contexto de violencia previa es parte central de la defensa. Si tu caso involucra <strong>legítima defensa, violencia doméstica o criminalización por vulnerabilidad</strong>, escríbenos.</p>
-                            <a href="https://wa.me/525535538561?text=Hola,%20necesito%20orientación%20legal%20de%20Cosiendo%20Alas" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-azulOceano text-white font-bold rounded-lg hover:bg-moradoMedio transition text-sm gap-2">
-                                <i class="fa-solid fa-scale-balanced"></i> Solicitar Asesoría Legal
-                            </a>
-                        </div>
-                        <div class="aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-sm border-2 border-gray-200 flex items-center justify-center">
-                            <div class="text-center p-6">
-                                <i class="fa-brands fa-youtube text-5xl text-red-500 mb-3 opacity-50"></i>
-                                <h3 class="font-bold text-gray-700 text-sm">[Espacio para Video Youtube]</h3>
-                                <p class="text-xs text-gray-500 mt-1">"¿Por qué el sistema criminaliza a las mujeres? La importancia de la defensa con perspectiva de género"</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 6 — PERSPECTIVA DE GÉNERO
-        ════════════════════════════════════════════════ -->
-        <section id="perspectiva-genero" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-purple-100 p-6 hover:shadow-md transition-all group-hover:border-moradoMedio">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-venus-mars text-2xl text-moradoMedio"></i>
-                        </div>
-                        <div>
-                            <span class="section-tag bg-purple-100 text-purple-700 mb-1">Marco metodológico</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">¿Qué es la Perspectiva de Género?</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">No es ideología. Es metodología jurídica obligatoria. Y no es exclusiva para mujeres.</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-moradoMedio accordion-icon ml-4 flex-shrink-0"></i>
-                </div>
-            </button>
-
-            <div class="accordion-content">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-purple-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <!-- Definición SCJN -->
-                    <div class="bg-grisAntracita rounded-xl p-6 mb-6 text-white">
-                        <h3 class="font-titulo1 italic text-doradoSuave text-lg mb-3">¿Qué dice la SCJN?</h3>
-                        <p class="text-sm text-gray-200 leading-relaxed mb-4">La Suprema Corte de Justicia de la Nación define la perspectiva de género como un <strong class="text-white">método de análisis</strong> — no una ideología, no una preferencia política — que permite identificar cómo las desigualdades estructurales entre grupos sociales (construidas históricamente en torno al género, pero también a la clase, la etnia, la edad o la orientación sexual) afectan de manera diferenciada el acceso a la justicia y el ejercicio de los derechos.</p>
-                        <p class="text-sm text-gray-200">Desarrollado en el <strong class="text-white">Protocolo para Juzgar con Perspectiva de Género</strong> de la SCJN (primera edición 2013, actualizado en 2020), documento de referencia obligatoria para el Poder Judicial de la Federación.</p>
-                    </div>
-
-                    <!-- Preguntas clave -->
-                    <div class="mb-6">
-                        <h3 class="font-subtitulo font-bold text-base text-grisAntracita mb-3">En términos prácticos, juzgar con perspectiva de género significa hacerse estas preguntas:</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-start gap-3 bg-purple-50 rounded-lg p-3">
-                                <i class="fa-solid fa-circle-question text-moradoMedio mt-0.5 flex-shrink-0"></i>
-                                <p class="text-sm text-gray-700">¿La situación de las partes es realmente simétrica, o existe una relación de poder asimétrica que no es visible a primera vista?</p>
-                            </div>
-                            <div class="flex items-start gap-3 bg-purple-50 rounded-lg p-3">
-                                <i class="fa-solid fa-circle-question text-moradoMedio mt-0.5 flex-shrink-0"></i>
-                                <p class="text-sm text-gray-700">¿El contexto de vida de alguna de las partes — incluyendo su historia de violencia, su situación económica, su identidad — es relevante para entender los hechos?</p>
-                            </div>
-                            <div class="flex items-start gap-3 bg-purple-50 rounded-lg p-3">
-                                <i class="fa-solid fa-circle-question text-moradoMedio mt-0.5 flex-shrink-0"></i>
-                                <p class="text-sm text-gray-700">¿Estoy aplicando estereotipos de género, consciente o inconscientemente, en mi valoración de la prueba o de la credibilidad de los testimonios?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ¿Solo para mujeres? -->
-                    <div class="bg-white border-2 border-moradoMedio rounded-xl p-5 mb-6">
-                        <h3 class="font-subtitulo font-bold text-moradoMedio text-base mb-3">¿Es solo para mujeres? <span class="text-grisAntracita">No.</span></h3>
-                        <p class="text-sm text-gray-600 mb-3">La perspectiva de género no protege a "las mujeres contra los hombres". Lo que hace es identificar cómo los roles, expectativas y jerarquías de género — construidos socialmente — afectan a cualquier persona que se desvíe de la norma dominante. Es igualmente aplicable en casos que involucran:</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <div class="flex items-start gap-2 text-sm text-gray-700">
-                                <i class="fa-solid fa-user-shield text-moradoMedio mt-0.5 flex-shrink-0 text-xs"></i>
-                                <p><strong>Hombres víctimas de violencia sexual</strong>, cuyo testimonio es desestimado por los estereotipos de masculinidad hegemónica.</p>
-                            </div>
-                            <div class="flex items-start gap-2 text-sm text-gray-700">
-                                <i class="fa-solid fa-rainbow text-moradoMedio mt-0.5 flex-shrink-0 text-xs"></i>
-                                <p><strong>Personas de la comunidad LGBTQ+</strong>, que enfrentan sesgos estructurales tanto como víctimas como imputadas.</p>
-                            </div>
-                            <div class="flex items-start gap-2 text-sm text-gray-700">
-                                <i class="fa-solid fa-child text-moradoMedio mt-0.5 flex-shrink-0 text-xs"></i>
-                                <p><strong>Niñas, niños y adolescentes</strong>, cuya credibilidad como testigos o víctimas es sistemáticamente cuestionada.</p>
-                            </div>
-                            <div class="flex items-start gap-2 text-sm text-gray-700">
-                                <i class="fa-solid fa-person text-moradoMedio mt-0.5 flex-shrink-0 text-xs"></i>
-                                <p><strong>Hombres imputados en contextos de violencia doméstica</strong>, donde el análisis puede revelar coerción o defensa propia que el sistema invisibiliza.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-purple-50 border border-purple-100 rounded-xl p-5">
-                        <h3 class="font-bold text-grisAntracita text-sm mb-2">¿Por qué importa en tu caso?</h3>
-                        <p class="text-sm text-gray-600">Porque los estereotipos de género matan casos. Cuando una víctima no llora "como se espera", cuando una imputada no encaja con la imagen de "víctima perfecta", cuando un hombre denuncia una agresión sexual, o cuando una adolescente describe violencia que los adultos no quieren creer — en todos esos momentos, el análisis sin perspectiva de género produce sentencias injustas. <strong>Exigir que se aplique esta perspectiva no es pedir un favor: es invocar una obligación constitucional del sistema.</strong></p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ═══════════════════════════════════════════════
-             BLOQUE 7 — PERSPECTIVA DE INFANCIA
-        ════════════════════════════════════════════════ -->
-        <section id="perspectiva-infancia" class="mb-10">
-            <button class="accordion-btn w-full text-left group" onclick="toggleAccordion(this)">
-                <div class="flex items-center justify-between bg-white rounded-2xl shadow-sm border border-cyan-100 p-6 hover:shadow-md transition-all group-hover:border-turquesaClaro">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-child text-2xl text-turquesaClaro"></i>
-                        </div>
-                        <div>
-                            <span class="section-tag bg-cyan-100 text-cyan-700 mb-1">Marco metodológico</span>
-                            <h2 class="font-subtitulo font-bold text-xl sm:text-2xl text-grisAntracita">¿Qué es la Perspectiva de Infancia?</h2>
-                            <p class="text-sm text-gray-500 mt-0.5 font-texto">Cuando la víctima o testigo es NNA, las reglas cambian — o deberían.</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-xl text-turquesaClaro accordion-icon ml-4 flex-shrink-0"></i>
-                </div>
-            </button>
-
-            <div class="accordion-content">
-                <div class="bg-white rounded-b-2xl border border-t-0 border-cyan-100 px-6 sm:px-8 pb-8 pt-4">
-
-                    <p class="text-gray-600 mb-6 italic border-l-4 border-turquesaClaro pl-4 max-w-3xl">Los sistemas de justicia fueron diseñados por y para adultos. Cuando una niña, niño o adolescente (NNA) está involucrado en un proceso penal, ese diseño adultocentrado produce daños profundos si no se corrige.</p>
-
-                    <!-- Qué es el protocolo -->
-                    <div class="bg-cyan-50 border border-cyan-100 rounded-xl p-5 mb-6">
-                        <h3 class="font-bold text-grisAntracita text-base mb-2">¿Qué es el Protocolo para Juzgar con Perspectiva de Infancia y Adolescencia?</h3>
-                        <p class="text-sm text-gray-600">Es un documento de la Suprema Corte de Justicia de la Nación (publicado en <strong>2021</strong>) que establece las obligaciones metodológicas y procedimentales para quienes imparten justicia cuando una persona menor de 18 años está involucrada en un proceso judicial. Complementa al Protocolo de Perspectiva de Género, reconociendo que la infancia es en sí misma una categoría que genera vulnerabilidad estructural en el sistema.</p>
-                    </div>
-
-                    <!-- Qué cambia -->
-                    <h3 class="font-subtitulo font-bold text-base text-turquesaClaro mb-4">¿Qué cambia cuando hay una NNA involucrada?</h3>
-
-                    <div class="space-y-4">
-
-                        <div class="derecho-card bg-cyan-50 p-5 rounded-xl" style="border-left-color: #5dcad4;">
-                            <h4 class="font-bold text-grisAntracita text-sm mb-1.5">La credibilidad no puede cuestionarse con los mismos parámetros que los de un adulto</h4>
-                            <p class="text-sm text-gray-600">Los niños y adolescentes tienen formas distintas de recordar, narrar y procesar experiencias traumáticas. Un testimonio fragmentado, no lineal o con inconsistencias menores <strong>no significa que sea falso</strong>: puede ser el resultado completamente normal de cómo la memoria procesa el trauma en una mente en desarrollo. El protocolo obliga a los juzgadores a considerar esta realidad antes de desechar un testimonio.</p>
-                        </div>
-
-                        <div class="derecho-card bg-cyan-50 p-5 rounded-xl" style="border-left-color: #5dcad4;">
-                            <h4 class="font-bold text-grisAntracita text-sm mb-1.5">La declaración debe tomarse en condiciones especiales</h4>
-                            <p class="text-sm text-gray-600">Las NNA no deberían declarar en un Ministerio Público ordinario con el mismo procedimiento que un adulto. Existen — o deberían existir — cámaras de Gesell, entrevistadores especializados y condiciones que minimicen la revictimización. Si estos recursos no están disponibles, la defensa o la asesora jurídica puede exigir que se busquen alternativas.</p>
-                        </div>
-
-                        <div class="derecho-card bg-cyan-50 p-5 rounded-xl" style="border-left-color: #5dcad4;">
-                            <h4 class="font-bold text-grisAntracita text-sm mb-1.5">El interés superior de la infancia es el principio rector</h4>
-                            <p class="text-sm text-gray-600">Antes que la eficiencia procesal, antes que la comodidad institucional, el proceso debe construirse alrededor del bienestar de la NNA involucrada. Esto incluye evitar que repita su declaración múltiples veces, que sea confrontada con su agresor, o que sea sometida a peritajes reiterados sin justificación técnica.</p>
-                        </div>
-
-                        <div class="derecho-card bg-cyan-50 p-5 rounded-xl" style="border-left-color: #5dcad4;">
-                            <h4 class="font-bold text-grisAntracita text-sm mb-1.5">La NNA tiene derechos procesales propios</h4>
-                            <p class="text-sm text-gray-600">Una niña o adolescente víctima no es simplemente "la prueba viviente" del delito. Tiene derecho a ser informada de lo que ocurre en su caso en <strong>lenguaje adecuado a su edad</strong>, a expresar su opinión en el proceso cuando sea pertinente, y a que esa opinión sea tomada en cuenta con el peso que corresponde a su madurez.</p>
-                        </div>
-
-                    </div>
-
-                    <!-- Por qué importa -->
-                    <div class="mt-6 bg-grisAntracita rounded-xl p-5 text-white">
-                        <h3 class="font-subtitulo font-bold text-doradoSuave text-base mb-2">¿Por qué esto importa en casos de violencia sexual?</h3>
-                        <p class="text-sm text-gray-200 mb-3">Porque la mayoría de los casos de abuso sexual infantil ocurren en entornos de confianza — familia, escuela, círculos cercanos — y son cometidos por personas que tienen autoridad sobre la víctima. Esto significa que con frecuencia <strong class="text-white">no hay más prueba que el testimonio de la niña o el niño</strong>. Cuando ese testimonio es descartado por no cumplir estándares adultos de coherencia narrativa, el sistema no solo falla: protege al agresor.</p>
-                        <p class="text-sm text-gray-200">El protocolo existe para cerrar esa brecha. Que exista no significa que siempre se aplique. <strong class="text-white">Saber que existe te da herramientas para exigirlo.</strong></p>
-                    </div>
-
-                    <div class="mt-5 bg-cyan-50 border border-cyan-200 rounded-xl p-4">
-                        <p class="text-sm text-gray-600"><i class="fa-solid fa-hands-holding-child text-turquesaClaro mr-2"></i>Si estás acompañando a una niña, niño o adolescente víctima de violencia sexual, en Cosiendo Alas podemos orientarte sobre cómo asegurarte de que el proceso respete estos estándares. <a href="https://wa.me/525535538561?text=Hola,%20necesito%20orientación%20legal%20de%20Cosiendo%20Alas" target="_blank" class="font-bold text-azulOceano hover:underline">El acompañamiento especializado en estos casos es especialmente crítico desde el primer momento.</a></p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ═══════════════════════════════════════════════
-             SECCIÓN — CANAL YOUTUBE / TIKTOK
-        ════════════════════════════════════════════════ -->
-        <section class="mb-10">
-            <div class="bg-gradient-to-br from-grisAntracita to-azulOceano rounded-2xl p-8 sm:p-10 text-white text-center">
-                <div class="max-w-2xl mx-auto">
-                    <div class="flex justify-center gap-4 mb-5">
-                        <div class="w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center">
-                            <i class="fa-brands fa-youtube text-2xl text-white"></i>
-                        </div>
-                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center">
-                            <i class="fa-brands fa-tiktok text-2xl text-grisAntracita"></i>
-                        </div>
-                    </div>
-                    <h2 class="font-titulo1 italic text-2xl sm:text-3xl text-doradoSuave mb-3">¿Quieres aprender más?</h2>
-                    <p class="font-texto text-gray-200 mb-6 text-base">Síguenos en nuestros canales para contenido en video sobre derechos, procesos legales y acompañamiento en casos de violencia sexual. Explicamos el sistema para que nadie enfrente esto sin información.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://www.youtube.com/@CosiendoAlas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition shadow-lg">
-                            <i class="fa-brands fa-youtube text-xl"></i> Canal de YouTube
-                        </a>
-                        <a href="https://www.tiktok.com/@cosiendo.alas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-100 text-grisAntracita font-bold rounded-xl transition shadow-lg">
-                            <i class="fa-brands fa-tiktok text-xl"></i> TikTok de Cosiendo Alas
-                        </a>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-5">¿Tienes una duda específica? Escríbenos directamente por <a href="https://wa.me/525535538561" target="_blank" class="text-verdeEsperanza hover:underline font-bold">WhatsApp al 55 3553 8561</a></p>
-                </div>
+        
+        <section class="mt-16 bg-gradient-to-br from-azulOceano to-grisAntracita p-10 rounded-3xl shadow-xl text-center fade-in">
+            <h2 class="font-titulo1 font-bold text-3xl text-white mb-4">No estás sola frente al sistema</h2>
+            <p class="font-texto text-lavandaSuave text-lg max-w-2xl mx-auto mb-8">
+                Si percibes que estas perspectivas no están siendo respetadas en tu proceso, o si necesitas iniciar una denuncia y asegurar que tus derechos se respeten desde el día uno, en Cosiendo Alas podemos intervenir y acompañarte.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/525535538561" target="_blank" class="w-full sm:w-auto px-6 py-4 bg-green-500 text-white font-subtitulo font-bold rounded-xl hover:bg-green-600 transition shadow-lg flex items-center justify-center gap-2 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Asesoría vía WhatsApp
+                </a>
+                <a href="URL_YOUTUBE" target="_blank" class="w-full sm:w-auto px-6 py-4 bg-red-600 text-white font-subtitulo font-bold rounded-xl hover:bg-red-700 transition shadow-lg flex items-center justify-center gap-2 active:scale-95">
+                    <i class="fa-brands fa-youtube text-2xl"></i> Nuestro YouTube
+                </a>
+                <a href="URL_TIKTOK" target="_blank" class="w-full sm:w-auto px-6 py-4 bg-black text-white font-subtitulo font-bold rounded-xl hover:bg-gray-800 transition shadow-lg flex items-center justify-center gap-2 active:scale-95">
+                    <i class="fa-brands fa-tiktok text-2xl"></i> Nuestro TikTok
+                </a>
             </div>
         </section>
 
     </main>
 
-
-    <!-- FOOTER (idéntico al original) -->
-    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave">
+    <footer id="contacto" class="bg-grisAntracita text-white pt-16 pb-24 lg:pb-8 border-t-4 border-doradoSuave mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 lg:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                            <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
-                        </div>
-                        <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
+                         <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                             <img src="home.svg" alt="Icon" class="w-8 h-8 object-contain" onerror="this.src='https://placehold.co/100x100?text=CA';">
+                         </div>
+                        <h2 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h2>
                     </div>
                     <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
                         Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
-                            <i class="fa-brands fa-facebook-f text-xl"></i>
+                           <i class="fa-brands fa-facebook-f text-xl"></i>
                         </a>
                         <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
                             <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
-                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                        <a href="URL_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
                             <i class="fa-brands fa-tiktok text-xl"></i>
                         </a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto</h4>
+                    <h3 class="font-titulo1 text-xl italic mb-4 text-doradoSuave">Contacto Institucional</h3>
                     <ul class="space-y-3 font-texto text-lavandaSuave text-lg">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-envelope mt-1 text-verdeEsperanza"></i>
-                            <a href="mailto:cosiendo.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.alas@gmail.com</a>
+                            <a href="mailto:cosiendo.tus.alas@gmail.com" class="hover:text-white transition break-all">cosiendo.tus.alas@gmail.com</a>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-brands fa-whatsapp mt-1 text-verdeEsperanza"></i>
@@ -1009,20 +474,20 @@
                 </div>
             </div>
             <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
-                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados. Textos bajo licencia de uso libre con atribución.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        /* ── MENÚ LATERAL ── */
         const menuBtn = document.getElementById('menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
         const sideMenu = document.getElementById('side-menu');
         const overlay = document.getElementById('overlay');
         const navbar = document.getElementById('main-navbar');
         const navLogo = document.getElementById('nav-logo');
-
+        const menuLinks = document.querySelectorAll('#side-menu a');
+        
         function toggleMenu() {
             const isOpen = !sideMenu.classList.contains('translate-x-full');
             if (isOpen) {
@@ -1032,20 +497,14 @@
                 document.body.style.overflow = '';
             } else {
                 overlay.classList.remove('hidden');
-                void overlay.offsetWidth;
+                void overlay.offsetWidth; 
                 overlay.classList.remove('opacity-0');
                 sideMenu.classList.remove('translate-x-full');
                 document.body.style.overflow = 'hidden';
             }
         }
 
-        menuBtn.addEventListener('click', toggleMenu);
-        closeMenuBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-        document.querySelectorAll('#side-menu a').forEach(link => link.addEventListener('click', toggleMenu));
-
-        /* ── NAVBAR COMPACTO ── */
-        window.addEventListener('scroll', () => {
+        function harmonizeGraphics() {
             if (window.scrollY > 50) {
                 navbar.classList.add('nav-compact');
                 navLogo.classList.add('logo-compact');
@@ -1053,26 +512,20 @@
                 navbar.classList.remove('nav-compact');
                 navLogo.classList.remove('logo-compact');
             }
-        });
+        }
 
-        /* ── SALIDA DE EMERGENCIA (ESC) ── */
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => { link.addEventListener('click', toggleMenu); });
+        
+        window.addEventListener('scroll', harmonizeGraphics);
+        window.addEventListener('resize', harmonizeGraphics);
+        harmonizeGraphics();
+        
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") { window.location.href = "https://www.google.com"; }
         });
-
-        /* ── ACORDEÓN ── */
-        function toggleAccordion(btn) {
-            const content = btn.nextElementSibling;
-            const isOpen = content.classList.contains('open');
-
-            if (isOpen) {
-                content.classList.remove('open');
-                btn.classList.remove('active');
-            } else {
-                content.classList.add('open');
-                btn.classList.add('active');
-            }
-        }
     </script>
 </body>
 </html>
