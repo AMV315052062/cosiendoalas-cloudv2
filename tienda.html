@@ -46,12 +46,13 @@
         .logo-compact { height: 2.5rem !important; width: 2.5rem !important; }
         .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(101, 58, 130, 0.15); }
+        .img-carousel { transition: opacity 0.3s ease-in-out; }
     </style>
 </head>
 <body class="text-grisAntracita font-texto antialiased bg-fondoPagina overflow-x-hidden flex flex-col min-h-screen">
 
     <a href="https://www.google.com" id="safe-exit" class="fixed bottom-6 right-4 z-[100] bg-red-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center justify-center hover:bg-red-700 transition-all font-bold tracking-wide border-2 border-white sm:right-6 sm:px-5 active:scale-95" title="Cerrar página inmediatamente">
-        <i class="fa-solid fa-person-running text-xl mr-2"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
+        <i class="fa-solid fa-person-running text-xl mr-2 text-white"></i> <span class="text-sm sm:text-base">SALIDA RÁPIDA</span>
     </a>
 
     <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-50 transition-all duration-300 h-20">
@@ -69,7 +70,7 @@
                         <i class="fa-brands fa-whatsapp text-xl"></i> <span>55 3553 8561</span>
                     </a>
                     <button id="menu-btn" class="text-azulOceano hover:text-verdeEsperanza focus:outline-none ml-2 p-2 active:bg-gray-100 rounded-full transition">
-                        <i class="fa-solid fa-bars text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-bars text-2xl sm:text-3xl text-azulOceano"></i>
                     </button>
                 </div>
             </div>
@@ -81,7 +82,7 @@
     <div id="side-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-[55] overflow-y-auto transform translate-x-full transition-transform duration-300">
         <div class="p-6">
             <div class="flex justify-between items-center mb-8">
-                <span class="font-subtitulo font-bold text-azulOceano text-lg">Menú</span>
+                <span class="font-subtitulo font-bold text-azulOceano text-lg tracking-widest uppercase">Menú</span>
                 <button id="close-menu-btn" class="text-gray-400 hover:text-azulOceano transition p-2"><i class="fa-solid fa-xmark text-2xl"></i></button>
             </div>
             <nav class="space-y-6 pb-20">
@@ -90,7 +91,6 @@
                     <ul class="space-y-3 pl-2 text-sm">
                         <li><a href="index.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Inicio</a></li>
                         <li><a href="somos.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">¿Quiénes somos?</a></li>
-                        <li><a href="directorio.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Directorio Institucional</a></li>
                     </ul>
                 </div>
                 <div>
@@ -102,18 +102,14 @@
                 <div>
                     <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Asistencia y Recursos</h3>
                     <ul class="space-y-3 pl-2 text-sm">
-                        <li><a href="que_hacer.html" class="block font-subtitulo font-bold text-red-600 hover:text-red-700 transition py-1"><i class="fa-solid fa-triangle-exclamation mr-2"></i>¿Qué hacer tras una agresión?</a></li>
+                        <li><a href="que_hacer.html" class="block font-subtitulo font-bold text-red-600 hover:text-red-700 transition py-1"><i class="fa-solid fa-triangle-exclamation mr-2"></i>¿Qué hacer hoy?</a></li>
                         <li><a href="orientacion_juridica.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Orientación y Defensa Legal</a></li>
-                        <li><a href="material_victimas.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para víctimas</a></li>
-                        <li><a href="material_acompañantes.html" class="block font-subtitulo font-semibold text-grisAntracita hover:text-verdeEsperanza transition py-1">Material para acompañantes</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad y Cultura</h3>
+                    <h3 class="font-titulo1 text-azulOceano text-lg italic border-b border-doradoSuave pb-1 mb-3">Comunidad</h3>
                     <ul class="space-y-3 pl-2 text-sm">
-                        <li><a href="recomendaciones.html" class="block font-subtitulo font-semibold text-verdeEsperanza hover:text-azulOceano transition py-1"><i class="fa-solid fa-heart-circle-check mr-2"></i>Recomendaciones Culturales</a></li>
-                        <li><a href="cult_viol.html" class="block font-subtitulo font-semibold text-red-500 hover:text-red-700 transition py-1"><i class="fa-solid fa-eye mr-2"></i>Cultura de la Violencia</a></li>
-                        <li><a href="tienda.html" class="block font-subtitulo font-bold text-verdeEsperanza transition py-1 mt-2 border-t border-gray-100 pt-2"><i class="fa-solid fa-store mr-2"></i>Tienda con Causa</a></li>
+                        <li><a href="tienda.html" class="block font-subtitulo font-bold text-verdeEsperanza transition py-1"><i class="fa-solid fa-store mr-2"></i>Tienda con Causa</a></li>
                     </ul>
                 </div>
             </nav>
@@ -123,12 +119,12 @@
     <header class="hero-shop pt-32 pb-16 lg:pt-40 lg:pb-24 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-doradoSuave opacity-20 rounded-full blur-3xl"></div>
         <div class="max-w-4xl mx-auto relative z-10">
-            <span class="text-doradoSuave font-bold tracking-widest uppercase text-sm mb-4 block">Apoya nuestro trabajo</span>
-            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-6 leading-tight">
-                Tienda <span class="text-doradoSuave italic">con Causa</span>
+            <span class="text-doradoSuave font-bold tracking-widest uppercase text-sm mb-4 block">Sostén nuestro vuelo</span>
+            <h1 class="font-titulo1 font-bold text-4xl sm:text-5xl text-white mb-6 leading-tight uppercase">
+                Tienda <span class="text-doradoSuave italic font-titulo1">con Causa</span>
             </h1>
             <p class="font-subtitulo text-lg text-gray-100 max-w-3xl mx-auto">
-                El 100% de los ingresos de esta tienda y de los donativos se destina a financiar la defensa legal y el acompañamiento psicosocial para víctimas de violencia que no cuentan con recursos.
+                El 100% de los ingresos financia la defensa legal y el acompañamiento para víctimas de violencia.
             </p>
         </div>
     </header>
@@ -137,107 +133,131 @@
         
         <section>
             <div class="flex items-center gap-4 mb-10">
-                <h2 class="font-subtitulo font-bold text-3xl text-grisAntracita">
-                    <i class="fa-solid fa-bag-shopping text-azulOceano mr-2"></i>Nuestros Productos
-                </h2>
+                <h2 class="font-subtitulo font-bold text-2xl text-grisAntracita uppercase tracking-tighter">Nuestros Artículos</h2>
                 <div class="h-1 bg-gray-200 flex-grow rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
-                    <div class="h-64 bg-gray-100 relative">
-                        <img src="https://placehold.co/600x600/f3f4f6/653a82?text=Tote+Bag" alt="Tote Bag Cosiendo Alas" class="w-full h-full object-cover">
+                <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col text-center">
+                    <div class="h-64 relative group">
+                        <img id="img-bolsa" src="https://placehold.co/600x600/653a82/white?text=Bolsa+1" alt="Bolsa" class="w-full h-full object-cover img-carousel">
+                        <div class="absolute inset-y-0 w-full flex justify-between items-center px-2">
+                            <button onclick="navigate('bolsa', -1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button onclick="navigate('bolsa', 1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Tote Bag "Reparando Vuelos"</h3>
-                        <p class="text-gray-600 text-sm mb-4 flex-grow">Bolsa de manta 100% algodón ecológico con ilustración original del colibrí de Cosiendo Alas. Ideal para el día a día.</p>
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                            <span class="font-bold text-xl text-azulOceano">$250 MXN</span>
-                            <button class="px-4 py-2 bg-azulOceano text-white font-bold rounded hover:bg-moradoMedio transition text-sm">
-                                Comprar
-                            </button>
+                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Bolsa de Algodón</h3>
+                        <p class="text-gray-500 text-xs mb-4 leading-relaxed italic">100% algodón ecológico con arte exclusivo.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <span class="block font-bold text-xl text-azulOceano mb-3">$250 MXN</span>
+                            <a href="https://wa.me/525535538561" target="_blank" class="w-full inline-block py-3 bg-azulOceano text-white font-bold rounded-xl uppercase text-[10px] tracking-widest shadow-lg">Pedir</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
-                    <div class="h-64 bg-gray-100 relative">
-                        <img src="https://placehold.co/600x600/f3f4f6/42c3d9?text=Playera" alt="Playera Cosiendo Alas" class="w-full h-full object-cover">
+                <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col text-center">
+                    <div class="h-64 relative">
+                        <img id="img-pines" src="https://placehold.co/600x600/42c3d9/2b1045?text=Pin+1" alt="Pines" class="w-full h-full object-cover img-carousel">
+                        <div class="absolute inset-y-0 w-full flex justify-between items-center px-2">
+                            <button onclick="navigate('pines', -1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button onclick="navigate('pines', 1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Playera "Justicia sin Revictimización"</h3>
-                        <p class="text-gray-600 text-sm mb-4 flex-grow">Playera unisex de algodón con nuestro lema institucional. Tallas desde CH hasta XXL.</p>
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                            <span class="font-bold text-xl text-azulOceano">$350 MXN</span>
-                            <button class="px-4 py-2 bg-azulOceano text-white font-bold rounded hover:bg-moradoMedio transition text-sm">
-                                Comprar
-                            </button>
+                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Pines Metálicos</h3>
+                        <p class="text-gray-500 text-xs mb-4 leading-relaxed italic">Varios diseños originales de nuestra red.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <span class="block font-bold text-xl text-azulOceano mb-3">$45 MXN</span>
+                            <a href="https://wa.me/525535538561" target="_blank" class="w-full inline-block py-3 bg-azulOceano text-white font-bold rounded-xl uppercase text-[10px] tracking-widest shadow-lg">Pedir</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col">
-                    <div class="h-64 bg-gray-100 relative">
-                        <img src="https://placehold.co/600x600/f3f4f6/fcc352?text=Libreta" alt="Libreta Bitácora" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Libreta Bitácora de Acompañamiento</h3>
-                        <p class="text-gray-600 text-sm mb-4 flex-grow">Cuaderno de pasta dura diseñado para documentar procesos, tomar notas de autocuidado o escribir libremente.</p>
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                            <span class="font-bold text-xl text-azulOceano">$200 MXN</span>
-                            <button class="px-4 py-2 bg-azulOceano text-white font-bold rounded hover:bg-moradoMedio transition text-sm">
-                                Comprar
-                            </button>
+                <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col text-center">
+                    <div class="h-64 relative">
+                        <img id="img-tazas" src="https://placehold.co/600x600/fcc352/2b1045?text=Taza+1" alt="Tazas" class="w-full h-full object-cover img-carousel">
+                        <div class="absolute inset-y-0 w-full flex justify-between items-center px-2">
+                            <button onclick="navigate('tazas', -1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button onclick="navigate('tazas', 1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2">Tazas</h3>
+                        <p class="text-gray-500 text-xs mb-4 leading-relaxed italic">Mensajes de justicia en cada sorbito.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <span class="block font-bold text-xl text-azulOceano mb-3">$180 MXN</span>
+                            <a href="https://wa.me/525535538561" target="_blank" class="w-full inline-block py-3 bg-azulOceano text-white font-bold rounded-xl uppercase text-[10px] tracking-widest shadow-lg">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover flex flex-col text-center">
+                    <div class="h-64 relative">
+                        <img id="img-libretas" src="https://placehold.co/600x600/afb0de/2b1045?text=A5+1" alt="Libretas" class="w-full h-full object-cover img-carousel">
+                        <div class="absolute inset-y-0 w-full flex justify-between items-center px-2">
+                            <button onclick="navigate('libretas', -1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button onclick="navigate('libretas', 1)" class="w-10 h-10 bg-white/90 rounded-full shadow text-azulOceano active:scale-90 transition"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2 uppercase">Libretas Tipo Moleskine A5</h3>
+                        <p class="text-gray-500 text-xs mb-4 leading-relaxed italic">Pasta dura.</p>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <span class="block font-bold text-xl text-azulOceano mb-3">$220 MXN</span>
+                            <a href="https://wa.me/525535538561" target="_blank" class="w-full inline-block py-3 bg-azulOceano text-white font-bold rounded-xl uppercase text-[10px] tracking-widest shadow-lg">Pedir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-8 min-h-[350px]">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4 text-gray-400">
+                        <i class="fa-solid fa-hourglass-half text-3xl"></i>
+                    </div>
+                    <h3 class="font-subtitulo font-bold text-2xl text-gray-400 uppercase tracking-widest italic tracking-tighter">PRÓXIMAMENTE</h3>
+                </article>
+
+                <article class="bg-yellow-50/20 rounded-2xl border-2 border-doradoSuave p-8 text-center flex flex-col items-center justify-center card-hover">
+                    <i class="fa-solid fa-wand-magic-sparkles text-4xl text-doradoSuave mb-4"></i>
+                    <h3 class="font-subtitulo font-bold text-xl text-grisAntracita mb-2 uppercase tracking-tighter">Personaliza tu artículo</h3>
+                    <p class="text-gray-600 text-[10px] mb-6 leading-relaxed font-texto italic">Diseñamos piezas especiales, escribenos para más información.</p>
+                    <a href="https://wa.me/525535538561" target="_blank" class="px-8 py-3 bg-doradoSuave text-grisAntracita font-bold rounded-full text-[10px] uppercase shadow-md active:scale-95 transition tracking-widest">Consultar</a>
                 </article>
 
             </div>
         </section>
 
-        <section>
-            <div class="bg-grisAntracita rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
-                <div class="absolute right-0 bottom-0 opacity-5 transform translate-x-1/4 translate-y-1/4">
-                    <i class="fa-solid fa-hand-holding-heart text-9xl"></i>
-                </div>
-                
-                <div class="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
-                    <div class="lg:w-1/2">
-                        <span class="text-doradoSuave font-bold tracking-widest uppercase text-sm mb-2 block">Aportaciones Voluntarias</span>
-                        <h2 class="font-titulo1 italic text-3xl md:text-4xl text-white mb-6">Ayúdanos a seguir defendiendo</h2>
-                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                            Los procesos penales son largos y costosos. Con tu donativo, permites que podamos ofrecer peritajes, asesoría jurídica y contención psicológica gratuita a quienes el sistema ha marginado.
-                        </p>
-                        
-                        <div class="bg-white/10 p-5 rounded-xl border-l-4 border-verdeEsperanza backdrop-blur-sm">
-                            <h4 class="font-bold text-white mb-2 flex items-center"><i class="fa-solid fa-shield-halved text-verdeEsperanza mr-2"></i> Transparencia y Seguridad Legal</h4>
-                            <p class="text-sm text-gray-300 leading-relaxed">
-                                Para garantizar la integridad del proyecto y prevenir cualquier intento de malversación o fabricación de delitos (extorsión), <strong>Cosiendo Alas no acepta depósitos ni transferencias bancarias directas a cuentas personales o CLABE</strong>. 
-                                <br><br>
-                                Todos los donativos son procesados de forma inalterable y auditable únicamente a través de plataformas oficiales certificadas, las cuales emiten tu comprobante de donación automáticamente.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="lg:w-1/2 w-full flex flex-col gap-6">
-                        <div class="bg-white p-8 rounded-2xl shadow-lg text-center transform transition hover:scale-105">
-                            <i class="fa-brands fa-paypal text-5xl text-[#00457C] mb-4"></i>
-                            <h3 class="font-bold text-grisAntracita text-xl mb-2">Donativo Seguro vía PayPal</h3>
-                            <p class="text-gray-500 text-sm mb-6">Aportación única o mensual con protección al donante. Acepta todas las tarjetas.</p>
-                            <a href="#" class="inline-block px-8 py-3 bg-[#0070BA] text-white font-bold rounded-full hover:bg-[#003087] transition shadow-md w-full sm:w-auto">
-                                Donar por PayPal
-                            </a>
-                        </div>
+        <section class="py-12 bg-white rounded-3xl border border-gray-100 text-center px-6 shadow-sm">
+            <h2 class="font-titulo1 italic text-3xl text-azulOceano mb-4 uppercase tracking-tighter">Transparencia Financiera</h2>
+            <p class="font-texto text-gray-600 mb-8 max-w-2xl mx-auto text-sm italic">Acceso abierto al registro de ingresos y egresos.</p>
+            <div class="flex justify-center">
+                <a href="https://docs.google.com/document/d/1V1erbzEK8QHPRMN7KXeoEx-m9xBRbI1H/edit?usp=sharing&ouid=104368945276173522002&rtpof=true&sd=true" target="_blank" class="px-8 py-4 bg-grisAntracita text-white font-subtitulo font-bold rounded-xl flex items-center justify-center gap-3 shadow-lg active:scale-95 text-xs uppercase tracking-widest transition">
+                    <i class="fa-solid fa-file-invoice-dollar text-xl text-doradoSuave"></i>
+                    REPORTE DE IMPACTO
+                </a>
+            </div>
+        </section>
 
-                        <div class="bg-white p-8 rounded-2xl shadow-lg text-center transform transition hover:scale-105">
-                            <i class="fa-brands fa-patreon text-5xl text-[#FF424D] mb-4"></i>
-                            <h3 class="font-bold text-grisAntracita text-xl mb-2">Conviértete en Mecenas</h3>
-                            <p class="text-gray-500 text-sm mb-6">Únete a nuestra comunidad en Patreon y apadrina casos específicos mes con mes.</p>
-                            <a href="#" class="inline-block px-8 py-3 bg-[#FF424D] text-white font-bold rounded-full hover:bg-[#e63b45] transition shadow-md w-full sm:w-auto">
-                                Ir a Patreon
-                            </a>
-                        </div>
+        <section class="bg-grisAntracita rounded-3xl p-8 sm:p-12 shadow-xl text-white relative overflow-hidden">
+            <div class="absolute bottom-0 right-0 opacity-10 transform translate-x-1/4 translate-y-1/4 text-doradoSuave"><i class="fa-solid fa-hand-holding-heart text-[150px]"></i></div>
+            
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
+                <div>
+                    <h2 class="font-titulo1 italic text-3xl mb-4 text-doradoSuave uppercase tracking-tight">Tu ayuda es vital [cite: 1, 8]</h2>
+                    <p class="text-gray-300 font-texto leading-relaxed mb-8 text-sm italic">Tu donativo directo financia representacion jurídica</p>
+                    
+                    <a href="https://www.paypal.com/ncp/payment/UE3BABJRAEER2" target="_blank" class="w-full py-4 bg-[#0070BA] text-white font-subtitulo font-bold rounded-2xl flex items-center justify-center gap-3 shadow-2xl border-b-4 border-[#003087] active:scale-95 transition-all text-sm uppercase tracking-widest">
+                        <i class="fa-brands fa-paypal text-2xl text-white"></i>
+                        DONAR POR PAYPAL
+                    </a>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-patreon text-5xl text-[#FF424D] mb-4"></i>
+                        <h4 class="font-subtitulo font-bold text-sm mb-4 uppercase tracking-widest tracking-tighter">Mecenazgo Mensual con accesos especiales.</h4>
+                        <a href="https://patreon.com/Cosiendoalas?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" class="w-full block py-4 bg-[#FF424D] text-white font-bold rounded-full text-xs shadow-lg active:scale-95 text-center uppercase tracking-widest transition">Ir a Patreon</a>
                     </div>
                 </div>
             </div>
@@ -256,7 +276,7 @@
                         <h3 class="font-subtitulo font-bold text-2xl">Cosiendo Alas</h3>
                     </div>
                     <p class="font-texto text-lavandaSuave text-lg mb-6 max-w-md">
-                        Organización dedicada a la prevención de la violencia sexual y la atención integral de víctimas.
+                        Orientación jurídica, acompañamiento psicosocial y crítica institucional al servicio de quienes enfrentan la violencia sexual.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/share/16oUTUZ9zC/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
@@ -265,8 +285,11 @@
                         <a href="https://www.instagram.com/cosiendo.tus.alas/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
                             <i class="fa-brands fa-instagram text-xl"></i>
                         </a>
-                        <a href="ENLACE_TIKTOK" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                        <a href="https://www.tiktok.com/@cosiendoalas.mx" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
                             <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@cosiendoalasmx" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-azulOceano flex items-center justify-center hover:bg-verdeEsperanza transition">
+                            <i class="fa-brands fa-youtube text-xl"></i>
                         </a>
                     </div>
                 </div>
@@ -285,7 +308,7 @@
                 </div>
             </div>
             <div class="border-t border-moradoMedio border-opacity-30 pt-8 text-center text-lavandaSuave text-sm font-texto">
-                <p>&copy; 2024 Cosiendo Alas. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Cosiendo Alas. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
